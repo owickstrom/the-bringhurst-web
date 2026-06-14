@@ -28,6 +28,64 @@ feugiat sit amet enim. Aenean sed neque dictum, hendrerit enim dictum, accumsan
 velit. Mauris porta risus sed quam laoreet, ac porta ex lacinia. Praesent
 consectetur quam enim, sed faucibus orci congue a.
 
+<figure>
+<table id="font-sizes">
+    <tr>
+        <td style="font-size: calc((3rem / 4));">a</td>
+        <td style="font-size: calc((7rem / 8));">a</td>
+        <td style="font-size: 1rem;">a</td>
+        <td style="font-size: calc((9rem / 8));">a</td>
+        <td style="font-size: calc((5rem / 4));">a</td>
+        <td style="font-size: calc((11rem / 8));">a</td>
+        <td style="font-size: calc((3rem / 2));">a</td>
+        <td style="font-size: 2rem;">a</td>
+        <td style="font-size: calc((5rem / 2));">a</td>
+        <td style="font-size: 3rem;">a</td>
+        <td style="font-size: 4rem;">a</td>
+    </tr>
+    <tr>
+        <td>3/4</td>
+        <td>7/8</td>
+        <td>1</td>
+        <td>9/8</td>
+        <td>5/4</td>
+        <td>11/8</td>
+        <td>3/2</td>
+        <td>2</td>
+        <td>5/6</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>0.75</td>
+        <td>0.875</td>
+        <td>1</td>
+        <td>1.125</td>
+        <td>1.25</td>
+        <td>1.375</td>
+        <td>1.5</td>
+        <td>2</td>
+        <td>2.5</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>14</td>
+        <td>16</td>
+        <td>18</td>
+        <td>20</td>
+        <td>22</td>
+        <td>24</td>
+        <td>36</td>
+        <td>42</td>
+        <td>48</td>
+        <td>72</td>
+    </tr>
+</table>
+<figcaption>Standard font sizes in fractional and decimal <code>rem</code> units, along with their <code>px</code> equivalents.</figcaption>
+</figure>
+
 ## Principles
 
 ### Do the thing.
@@ -192,93 +250,3 @@ And radio buttons:
 <label><input name="radio" type="radio" /> Option #3</label>
 </form>
 
-## Grids
-
-Add the `grid` class to a container to divide up the horizontal space evenly for the cells.
-Note that it maintains the monospace, so the total width might not be 100%.
-Here are six grids with increasing cell count:
-
-<div class="grid"><input readonly value="1" /></div>
-<div class="grid"><input readonly value="1" /><input readonly value="2" /></div>
-<div class="grid"><input readonly value="1" /><input readonly value="2" /><input readonly value="3" /></div>
-<div class="grid"><input readonly value="1" /><input readonly value="2" /><input readonly value="3" /><input readonly value="4" /></div>
-<div class="grid"><input readonly value="1" /><input readonly value="2" /><input readonly value="3" /><input readonly value="4" /><input readonly value="5" /></div>
-<div class="grid"><input readonly value="1" /><input readonly value="2" /><input readonly value="3" /><input readonly value="4" /><input readonly value="5" /><input readonly value="6" /></div>
-
-If we want one cell to fill the remainder, we set `flex-grow: 1;` for that particular cell.
-
-<div class="grid"><input readonly value="1" /><input readonly value="2" /><input readonly value="3!" style="flex-grow: 1;" /><input readonly value="4" /><input readonly value="5" /><input readonly value="6" /></div>
-
-## ASCII Drawings
-
-We can draw in `<pre>` tags using [box-drawing characters](https://en.wikipedia.org/wiki/Box-drawing_characters):
-
-```
-╭─────────────────╮
-│ MONOSPACE ROCKS │
-╰─────────────────╯
-```
-
-To have it stand out a bit more, we can wrap it in a `<figure>` tag, and why not also add a `<figcaption>`.
-
-<figure>
-<pre>
-┌───────┐ ┌───────┐ ┌───────┐
-│Actor 1│ │Actor 2│ │Actor 3│
-└───┬───┘ └───┬───┘ └───┬───┘
-    │         │         │    
-    │         │  msg 1  │    
-    │         │────────►│    
-    │         │         │    
-    │  msg 2  │         │    
-    │────────►│         │    
-┌───┴───┐ ┌───┴───┐ ┌───┴───┐
-│Actor 1│ │Actor 2│ │Actor 3│
-└───────┘ └───────┘ └───────┘</pre>
-<figcaption>Example: Message passing.</figcaption>
-</figure>
-
-Let's go wild and draw a chart!
-
-<figure><pre>
-                      Things I Have
-                                              
-    │                                     ████ Usable
-15  │
-    │                                     ░░░░ Broken
-    │
-12  │             ░            
-    │             ░            
-    │   ░         ░              
- 9  │   ░         ░              
-    │   ░         ░              
-    │   ░         ░                    ░
- 6  │   █         ░         ░          ░
-    │   █         ░         ░          ░
-    │   █         ░         █          ░
- 3  │   █         █         █          ░
-    │   █         █         █          ░
-    │   █         █         █          ░
- 0  └───▀─────────▀─────────▀──────────▀─────────────
-      Socks     Jeans     Shirts   USB Drives
-</pre></figure>
-
-## Media
-
-Media objects are supported, like images and video:
-
-![A room in an old French castle (2024)](demo/castle.jpg)
-
-![[The Center of the Web (1914), Wikimedia](https://en.wikisource.org/wiki/Page:The_Center_of_the_Web_(1914).webm/11)](https://upload.wikimedia.org/wikipedia/commons/e/e0/The_Center_of_the_Web_%281914%29.webm)
-
-They extend to the width of the page, and add appropriate padding in the bottom to maintain the monospace grid.
-
-# Discussion
-
-That's it for now.
-I've very much enjoyed making this, pushing my CSS chops and having a lot of fun with the design.
-If you like it or even decide to use it, please [let me know](https://x.com/owickstrom).
-
-The full source code is here: [github.com/owickstrom/the-monospace-web](https://github.com/owickstrom/the-monospace-web)
-
-Finally, a massive shout-out to [U.S. Graphics Company](https://x.com/usgraphics) for all the inspiration.

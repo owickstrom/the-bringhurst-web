@@ -1,0 +1,20 @@
+{
+  "name": "elements-of-typography",
+  "version": "0.1.0",
+  "description": "TODO",
+  "homepage": "https://github.com/owickstrom/elements-of-web-typography#readme",
+  "bugs": {
+    "url": "https://github.com/owickstrom/elements-of-web-typography/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owickstrom/elements-of-web-typography.git"
+  },
+  "license": "MIT",
+  "author": "Oskar Wickström",
+  "type": "commonjs",
+  "main": "index.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

@@ -2,10 +2,10 @@
  * By Oskar Wickström
  * Licensed under the MIT License (https://github.com/owickstrom/elements-of-web-typography/blob/main/LICENSE.md)
  **/
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-  --font-family: "Crimson Pro", serif;
+  --font-family: "Alegreya", serif;
   --line-height: 1.20rem;
   --border-thickness: 1.5px;
   --text-color: #000;
@@ -14,7 +14,7 @@
   --background-color-alt: #eee;
 
   --font-weight-normal: 450;
-  --font-weight-medium: 550;
+  --font-weight-medium: 600;
   --font-weight-bold: 800;
 
   font-family: var(--font-family);
@@ -22,6 +22,7 @@
   font-weight: var(--font-weight-normal);
   font-style: normal;
   font-variant-numeric: oldstyle-nums;
+  font-feature-settings: "onum"; 
   font-size: 16px;
 }
 
@@ -81,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2#toc-title {
   font-size: 1.25rem;
-  font-weight: normal;
+  font-weight: var(--font-weight-normal);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   padding-bottom: calc(var(--line-height));
@@ -91,7 +92,7 @@ h1, h2#toc-title {
 
 h2 {
   font-size: 0.875rem;
-  font-weight: var(--font-weight-medium);
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -192,15 +193,13 @@ sub {
 }
 
 table {
-  position: relative;
-  top: calc(var(--line-height) / 2);
-  width: calc(round(down, 100%, 1ch));
+  width: 100%;
   border-collapse: collapse;
   margin: 0 0 calc(var(--line-height) * 2);
 }
 
 th, td {
-  border: var(--border-thickness) solid var(--text-color);
+  /* border: var(--border-thickness) solid var(--text-color); */
   padding: 
     calc((var(--line-height) / 2))
     calc(1ch - var(--border-thickness) / 2)
@@ -231,18 +230,19 @@ header {
 header h1 {
   font-size: 2.5rem;
   line-height: calc(2 * var(--line-height));
-  margin: calc(var(--line-height) * 2) 0 calc(var(--line-height) * 2);
+  margin: calc(var(--line-height) * 1) 0;
   text-transform: initial;
   letter-spacing: 0;
   padding-bottom: 0;
   border-bottom: none;
 }
 header .subtitle {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-style: italic;
-  margin-bottom: calc(var(--line-height) * 3);
+  margin-bottom: calc(var(--line-height) * 2);
 }
-header .version {
+header p {
+  text-indent: 0;
 }
 
 p {
@@ -303,12 +303,12 @@ pre, code {
   font-family: var(--font-family);
 }
 
-code {
+p code, figcaption code {
   font-weight: var(--font-weight-medium);
 }
 
 figure {
-  margin: calc(var(--line-height) * 2) 3ch;
+  margin: calc(var(--line-height) * 2) 0;
   overflow-x: auto;
   overflow-y: hidden;
 }
@@ -317,6 +317,7 @@ figcaption {
   display: block;
   font-style: italic;
   margin-top: var(--line-height);
+  text-align: center;
 }
 
 ul, ol {
@@ -504,27 +505,12 @@ label input {
 .grid:has(> :last-child:nth-child(8)) { --grid-cells: 8; }
 .grid:has(> :last-child:nth-child(9)) { --grid-cells: 9; }
 
-/* DEBUG UTILITIES */
+/* DEMO UTILITIES */
 
-.debug .debug-grid {
-  --color: color-mix(in srgb, var(--text-color) 10%, var(--background-color) 90%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background-image:
-    repeating-linear-gradient(var(--color) 0 1px, transparent 1px 100%),
-    repeating-linear-gradient(90deg, var(--color) 0 1px, transparent 1px 100%);
-  background-size: 1ch var(--line-height);
-  margin: 0;
-}
-
-.debug .off-grid {
-  background: rgba(255, 0, 0, 0.1);
-}
-
-.debug-toggle-label {
-  text-align: right;
+#font-sizes td {
+  width: 1%;
+  text-align: center;
+  vertical-align: baseline;
+  line-height: 3rem;
+  padding: 0;
 }
