@@ -80,21 +80,22 @@ h1, h2, h3, h4, h5, h6 {
   line-height: var(--line-height);
 }
 
-h1, h2#toc-title {
+body > h1, h2#toc-title {
   font-size: 1.25rem;
   font-weight: var(--font-weight-normal);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding-bottom: calc(var(--line-height));
-  margin: calc(var(--line-height) * 2) 0 var(--line-height);
+  letter-spacing: 0.15em;
+  padding: calc(var(--line-height)) 0;
+  margin: var(--line-height) 0;
   border-bottom: var(--border-thickness) solid var(--text-color);
+  background: var(--background-color);
 }
 
 h2 {
   font-size: 0.875rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.125em;
 }
 
 h3 {
@@ -446,64 +447,20 @@ label input {
   width: 100%;
 }
 
-.tree, .tree ul {
-  position: relative;
-  padding-left: 0;
-  list-style-type: none;
-  line-height: var(--line-height);
-}
-.tree ul {
-  margin: 0;
-}
-.tree ul li {
-  position: relative;
-  padding-left: 1.5ch;
-  margin-left: 1.5ch;
-  border-left: var(--border-thickness) solid var(--text-color);
-}
-.tree ul li:before {
-  position: absolute;
-  display: block;
-  top: calc(var(--line-height) / 2);
-  left: 0;
-  content: "";
-  width: 1ch;
-  border-bottom: var(--border-thickness) solid var(--text-color);
-}
-.tree ul li:last-child {
-  border-left: none;
-}
-.tree ul li:last-child:after {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  content: "";
-  height: calc(var(--line-height) / 2);
-  border-left: var(--border-thickness) solid var(--text-color);
+.toc-section-number {
+  font-size: .875rem;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0;
+  margin-right: .5ch;
+  font-style: normal;
 }
 
-.grid {
-  --grid-cells: 0;
-  display: flex;
-  gap: 1ch;
-  width: calc(round(down, 100%, (1ch * var(--grid-cells)) - (1ch * var(--grid-cells) - 1)));
-  margin-bottom: var(--line-height);
+#TOC a {
+  text-decoration: none;
 }
-
-.grid > *,
-.grid > input {
-  flex: 0 0 calc(round(down, (100% - (1ch * (var(--grid-cells) - 1))) / var(--grid-cells), 1ch));
+#TOC a:hover {
+  text-decoration: underline;
 }
-.grid:has(> :last-child:nth-child(1)) { --grid-cells: 1; }
-.grid:has(> :last-child:nth-child(2)) { --grid-cells: 2; }
-.grid:has(> :last-child:nth-child(3)) { --grid-cells: 3; }
-.grid:has(> :last-child:nth-child(4)) { --grid-cells: 4; }
-.grid:has(> :last-child:nth-child(5)) { --grid-cells: 5; }
-.grid:has(> :last-child:nth-child(6)) { --grid-cells: 6; }
-.grid:has(> :last-child:nth-child(7)) { --grid-cells: 7; }
-.grid:has(> :last-child:nth-child(8)) { --grid-cells: 8; }
-.grid:has(> :last-child:nth-child(9)) { --grid-cells: 9; }
 
 /* DEMO UTILITIES */
 
