@@ -12,9 +12,10 @@
 <body>
 <header>
   <h1 class="title">Elements of Web Typography</h1>
-  <p class="subtitle">Or, stealing from the greats.</span>
-  <p>Authored by <a href="https://wickstrom.tech"><cite>Oskar
-Wickström</cite></a>. <span class="version">v0.1.0</span>, licensed under <a>MIT</a>.</p>
+  <p class="subtitle">A portable <abbr>CSS</abbr> adaptation of
+Bringhurst’s system</span>
+<p>Authored by <a href="https://wickstrom.tech"><cite>Oskar
+Wickström</cite></a>. <span class="version">v0.1.0</span>, licensed under <a><abbr>MIT</abbr></a>.</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <h2 id="toc-title">Contents</h2>
@@ -43,6 +44,8 @@ class="toc-section-number">2</span> Elements</a>
 class="toc-section-number">2.1</span> Lists</a></li>
 <li><a href="#tables" id="toc-tables"><span
 class="toc-section-number">2.2</span> Tables</a></li>
+<li><a href="#code-blocks" id="toc-code-blocks"><span
+class="toc-section-number">2.3</span> Code Blocks</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -371,6 +374,18 @@ Pyramid of Khafre
 </tr>
 </tbody>
 </table>
+<h2 data-number="2.3" id="code-blocks"><span
+class="header-section-number">2.3</span> Code Blocks</h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--font-family</span><span class="ch">:</span> <span class="st">&quot;Alegreya&quot;</span><span class="op">,</span> <span class="dv">serif</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="va">--line-height</span><span class="ch">:</span> <span class="dv">1.2</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">--border-thickness</span><span class="ch">:</span> <span class="dv">1.5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-color</span><span class="ch">:</span> <span class="cn">#000</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-color-alt</span><span class="ch">:</span> <span class="cn">#666</span><span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="va">--background-color</span><span class="ch">:</span> <span class="cn">#fff</span><span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="va">--background-color-alt</span><span class="ch">:</span> <span class="cn">#eee</span><span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
   <div class="debug-grid"></div>
   <script src="src/index.js"></script>
 </body>

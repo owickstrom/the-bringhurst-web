@@ -1,6 +1,6 @@
 ---
 title: Elements of Web Typography
-subtitle: Or, stealing from the greats. 
+subtitle: A portable <abbr>CSS</abbr> adaptation of Bringhurst's system
 author: Oskar Wickström
 author-url: "https://wickstrom.tech"
 lang: en
@@ -223,3 +223,16 @@ Ordered lists look pretty much as you'd expect:
 </tbody>
 </table>
 
+## Code Blocks
+
+```css
+:root {
+  --font-family: "Alegreya", serif;
+  --line-height: 1.2;
+  --border-thickness: 1.5px;
+  --text-color: #000;
+  --text-color-alt: #666;
+  --background-color: #fff;
+  --background-color-alt: #eee;
+}
+```

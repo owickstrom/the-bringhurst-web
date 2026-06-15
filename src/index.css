@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 .header-section-number {
   font-family: 'Alegreya', serif;
   font-size: .875rem;
-  font-weight: var(--font-weight-normal);
+  font-weight: 500;
   font-variant: initial;
   letter-spacing: 0;
   margin-right: .5ch;
@@ -188,7 +188,7 @@ em {
   font-style: italic;
 }
 abbr {
-  font-size: 1.125rem;
+  font-size: 1.125em;
   font-variant: all-small-caps;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -248,7 +248,7 @@ thead tr:last-child th {
 }
 
 header {
-  margin: calc(var(--line-height) * 4) 0;
+  margin: calc(var(--line-height) * 3) 0;
 }
 header h1 {
   font-size: 2.5rem;
@@ -260,9 +260,9 @@ header h1 {
   border-bottom: none;
 }
 header .subtitle {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-style: italic;
-  margin-bottom: calc(var(--line-height) * 2);
+  margin-bottom: calc(var(--line-height) * 1);
 }
 header p {
   text-indent: 0;
@@ -330,11 +330,12 @@ figure pre {
 
 pre, code {
   font-family: var(--font-family-code);
+  font-weight: 450;
 }
 
 code {
-  font-weight: 450;
   font-size: .95em;
+  letter-spacing: -0.025em;
 }
 
 figure {
@@ -378,6 +379,7 @@ ul ul {
 }
 ol li:before { 
   font-size: .875rem;
+  font-weight: 500;
   content: counters(item, ".") ". ";
   counter-increment: item;
 }
@@ -483,10 +485,18 @@ label input {
 
 .toc-section-number {
   font-size: .875rem;
-  font-weight: var(--font-weight-normal);
+  font-weight: 500;
   letter-spacing: 0;
   margin-right: .5ch;
   font-style: normal;
+}
+
+#TOC > ul {
+  padding: 0;
+}
+#TOC ul li:before {
+  content: "";
+  margin: 0;
 }
 
 #TOC a {
