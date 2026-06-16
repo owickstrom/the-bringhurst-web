@@ -164,13 +164,13 @@ a:link, a:visited {
 }
 
 p {
-  margin-top: var(--line-height);
+  margin: var(--line-height) 0 0;
   text-align: justify;
   word-break: break-all;
 }
 p + p {
   margin-top: 0;
-  text-indent: 2ch;
+  text-indent: 3ch;
 }
 
 h1 + p,
