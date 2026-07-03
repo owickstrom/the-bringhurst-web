@@ -24,18 +24,12 @@ Wickström</cite></a>. <span class="version">v0.1.0</span>, licensed under <a><a
 <li><a href="#introduction" id="toc-introduction"><span
 class="toc-section-number">1</span> Introduction</a>
 <ul class="incremental">
-<li><a href="#thoughts-reasons" id="toc-thoughts-reasons"><span
-class="toc-section-number">1.1</span> Thoughts &amp; Reasons</a></li>
-<li><a href="#first-principles" id="toc-first-principles"><span
-class="toc-section-number">1.2</span> First Principles</a>
-<ul class="incremental">
-<li><a href="#do-the-thing." id="toc-do-the-thing."><span
-class="toc-section-number">1.2.1</span> Do the thing.</a></li>
-<li><a href="#do-it-well." id="toc-do-it-well."><span
-class="toc-section-number">1.2.2</span> Do it well.</a></li>
-<li><a href="#do-it-every-day." id="toc-do-it-every-day."><span
-class="toc-section-number">1.2.3</span> Do it every day.</a></li>
-</ul></li>
+<li><a href="#type-size" id="toc-type-size"><span
+class="toc-section-number">1.1</span> Type &amp; Size</a></li>
+<li><a href="#justification-indentation"
+id="toc-justification-indentation"><span
+class="toc-section-number">1.2</span> Justification &amp;
+Indentation</a></li>
 </ul></li>
 <li><a href="#elements" id="toc-elements"><span
 class="toc-section-number">2</span> Elements</a>
@@ -58,44 +52,44 @@ early days of programming web applications, or <em>Stockholm
 Syndrome</em> after years of captivity. Whatever the cause, <a
 href="https://owickstrom.github.io/the-monospace-web/">The Monospace
 Web</a> was born out of that love, and it took off way harder than I
-ever thought it would.</p>
-<p>Here I am again, spending weekend off-hours in a form of meditative
-state writing <abbr>CSS</abbr> for no purpose at all. In this case,
-inspiration struck after reading Robert Bringhurst’s classic <em>The
-Elements of Typographic Style</em>. A challenge indeed, trying to
-implement the layout and typography of the book itself in the browser.
-Reckless, some might say! Surely the same rules don’t apply across print
-and web, and any such attempt is vanity or misguided nostalgia. Perhaps,
-perhaps not. I’ve decided to publish regardless, and bid you to take
-from it what you will; if you find it pleasant or useful, that’s a
-wonder, and if you find it cursed or pointless, you may leave it aside
-and enjoy the abundance of silver-gradient text on purple with which we
-are bestowed.</p>
+ever thought it would, with many personal blogs and even application
+interfaces having adopted it.</p>
+<p>So, here I am again, spending weekend off-hours in a form of
+meditative state writing <abbr>CSS</abbr> for no purpose at all. This
+time, inspiration struck after reading Robert Bringhurst’s classic
+<em>The Elements of Typographic Style</em>. A challenge indeed, trying
+to implement the layout and typography of the book itself in the
+browser. Reckless, some might say! Surely the same rules don’t apply
+across print and web, and any such attempt is vanity or misguided
+nostalgia. Perhaps, perhaps not. I’ve decided to publish regardless, and
+bid you to take from it what you will; if you find it pleasant or
+useful, that’s a wonder, and if you find it cursed or pointless, you may
+leave it aside and enjoy the abundance of silver-gradient sans-serif on
+purple with which we are bestowed.</p>
 <p>Consider this the spiritual and variable-width successor of <em>The
 Monospace Web</em>, and equally open for reuse. I’m a sucker for Pandoc,
-but it should work in many more settings with minor tweaks.</p>
+but it should work in many other settings with minor tweaks.</p>
 <h1 data-number="1" id="introduction"><span
 class="header-section-number">1</span> Introduction</h1>
-<h2 data-number="1.1" id="thoughts-reasons"><span
-class="header-section-number">1.1</span> Thoughts &amp; Reasons</h2>
-<p>Lorem ipsum dolor sit amet, consectetur <em>adipiscing elit</em>. Sed
-vitae tortor ut arcu facilisis fermentum quis eget sem. Fusce pharetra
-velit nec nisi lacinia, vel dapibus nulla fermentum. Sed vitae metus
-fringilla, sodales ipsum nec, volutpat dolor. Nam euismod augue metus,
-et sollicitudin metus euismod ac. Quisque posuere euismod eros, non
-dapibus odio commodo vitae. Donec fermentum ex ut purus condimentum
-facilisis at pharetra velit.</p>
 <blockquote>
 <p>Typography is the craft of endowing human language with a durable
 visual form. <cite>Robert Bringhurst</cite></p>
 </blockquote>
-<p>Aliquam vestibulum turpis ornare ex tincidunt, placerat mollis neque
-fermentum. Suspendisse potenti. Quisque non ante velit. Sed tincidunt
-ultrices odio, euismod interdum lorem convallis a. Etiam eros odio,
-pretium et gravida et, feugiat sit amet enim. Aenean sed neque dictum,
-hendrerit enim dictum, accumsan velit. Mauris porta risus sed quam
-laoreet, ac porta ex lacinia. Praesent consectetur quam enim, sed
-faucibus orci congue a.</p>
+<h2 data-number="1.1" id="type-size"><span
+class="header-section-number">1.1</span> Type &amp; Size</h2>
+<p>In this document and its design, I’m using two variants of the
+<em>Alegreya</em> font. The regular variant is used for body text and
+third-level headings. Its small-caps variant, <em>Alegreya SC</em>, is
+used for titling-caps top-level headings, small-caps second-level
+headings, and for inline abbreviations such as <abbr>HTML</abbr>.
+Finally, <em>Courier Prime</em> is used for monospace code snippets.</p>
+<p>Bringhurst argues in his book for choosing a single versatile
+typeface rather than a hodgepodge of different ones. I think Alegreya is
+such a choice, and an excellent one at that.</p>
+<p>Every size is based on the root font size, which is 16px. Sizes are
+thus given in <code>rem</code> units, relative to the root font size.
+The following table shows how fractional, <code>rem</code>, and pixel
+measurements correlate.</p>
 <figure>
 <table id="font-sizes">
 <tr>
@@ -159,7 +153,7 @@ a
 2
 </td>
 <td>
-5/6
+5/2
 </td>
 <td>
 3
@@ -226,16 +220,16 @@ a
 24
 </td>
 <td>
-36
+32
 </td>
 <td>
-42
+40
 </td>
 <td>
 48
 </td>
 <td>
-72
+64
 </td>
 </tr>
 </table>
@@ -244,56 +238,23 @@ Standard font sizes in fractional and decimal <code>rem</code> units,
 along with their <code>px</code> equivalents.
 </figcaption>
 </figure>
-<h2 data-number="1.2" id="first-principles"><span
-class="header-section-number">1.2</span> First Principles</h2>
-<h3 data-number="1.2.1" id="do-the-thing."><span
-class="header-section-number">1.2.1</span> Do the thing.</h3>
-<p>Sed scelerisque pretium velit consectetur ultricies. Maecenas
-dignissim dolor sed diam feugiat, sit amet iaculis felis hendrerit. Sed
-vestibulum dui sed sem cursus, non facilisis dolor rutrum. Duis
-tincidunt vestibulum mi et luctus. Orci varius natoque penatibus et
-magnis dis parturient montes, nascetur ridiculus mus.</p>
-<p>Vivamus pharetra arcu a dui ultrices, non fermentum massa
-sollicitudin. Orci varius natoque penatibus et magnis dis parturient
-montes, nascetur ridiculus mus. Suspendisse imperdiet, dui a luctus
-dapibus, leo velit convallis augue, a malesuada ex leo eget justo.
-Integer nec malesuada eros. Curabitur mi quam, suscipit id enim sit
-amet, condimentum aliquam quam. Phasellus in elementum odio, ut
-efficitur tortor.</p>
-<h3 data-number="1.2.2" id="do-it-well."><span
-class="header-section-number">1.2.2</span> Do it well.</h3>
-<p>Orci varius natoque penatibus et magnis dis parturient montes,
-nascetur ridiculus mus. In rutrum, dolor a gravida dignissim, felis
-tortor laoreet odio, eget ornare lacus nunc ac lectus. Nulla quis nisl
-id mauris ultricies porttitor id quis ante. Donec vestibulum at lorem
-non rutrum. Etiam feugiat feugiat elementum. Etiam erat mauris, eleifend
-ac fermentum nec, accumsan nec nisi. Nullam eu consequat sapien. Proin
-lacinia vestibulum aliquam. Nunc dignissim nisi in metus tempus, porta
-consequat sapien auctor. Quisque congue, sem at congue tempus, libero
-nulla vestibulum justo, a facilisis magna erat eu ante. Curabitur
-posuere erat ut risus pharetra, convallis tempor erat volutpat. Integer
-lectus lectus, eleifend ut sagittis nec, rhoncus a est. Nulla non
-scelerisque nisl.</p>
-<h3 data-number="1.2.3" id="do-it-every-day."><span
-class="header-section-number">1.2.3</span> Do it every day.</h3>
-<p>Aliquam interdum felis nunc, vitae accumsan ipsum ultricies finibus.
-Nullam dictum magna id justo ornare, quis aliquam nulla dignissim.
-Praesent vitae leo volutpat, consectetur enim nec, rutrum risus. Quisque
-rhoncus, lorem sed elementum condimentum, leo augue cursus felis, vitae
-molestie ipsum lacus sed massa. Aenean at elit ac erat facilisis
-placerat. Donec luctus arcu vel dictum hendrerit. Sed a lacinia arcu.
-Sed ullamcorper, massa sit amet feugiat tincidunt, neque ante varius
-urna, in porttitor nulla massa eu justo. Morbi eleifend est vitae
-elementum varius. Cras scelerisque augue ullamcorper mauris vestibulum
-maximus. Etiam ullamcorper sem nec arcu ultrices luctus nec eu tortor.
-Quisque fermentum libero eu ex pulvinar aliquet. Curabitur semper eu
-diam ac pellentesque. Donec hendrerit congue enim, at laoreet massa
-porta at. Maecenas eu augue mi.</p>
-<p>Nulla in tellus mauris. Cras aliquet quis ex quis ullamcorper.
-Suspendisse eu orci sit amet ligula imperdiet ultrices quis euismod
-ante. Fusce ut lobortis erat. Sed convallis est a cursus aliquam.
-Pellentesque a ultrices dui. Praesent mattis nisl eget metus imperdiet
-rhoncus.</p>
+<p>The line height is 1.2rem, and is used as the basis for vertical
+alignment of all elements. Much like in <em>The Monospace Web</em> — but
+not to the same extremes — I’ve tried to get everything globally aligned
+to multiples of the line height.</p>
+<h2 data-number="1.2" id="justification-indentation"><span
+class="header-section-number">1.2</span> Justification &amp;
+Indentation</h2>
+<p>As in the book, body text is justified, not ragged-right. To some,
+this is heresy on the web. <em>Thou shalt not justify.</em> That’s what
+we’ve all been taught. But browsers have improved over time and today
+it’s not unthinkable to justify text. This stylesheet uses
+<code>word-break</code> and <code>hyphens</code> to control how words
+are broken and hyphenated at line breaks. The
+<code>hyphenate-limit-chars</code> attribute is useful to control the
+bounds of hyphenation.</p>
+<p>Also in line with tradition, each successive paragraph has an indent
+three character-widths, as measured by the <code>ch</code> unit.</p>
 <h1 data-number="2" id="elements"><span
 class="header-section-number">2</span> Elements</h1>
 <p>This document uses a few extra classes here and there, but mostly

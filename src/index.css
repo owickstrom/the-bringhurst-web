@@ -27,16 +27,6 @@
   font-size: 16px;
 }
 
-/* @media (prefers-color-scheme: dark) { */
-/*   :root { */
-/*     --text-color: #fff; */
-/*     --text-color-alt: #aaa; */
-/*     --background-color: #000; */
-/*     --background-color-alt: #111; */
-/*   } */
-/* } */
-/**/
-
 * {
   box-sizing: border-box;
 }
@@ -99,9 +89,8 @@ body > h1, h2#toc-title {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  padding: calc(var(--line-height)) 0;
+  padding: var(--line-height) 0 calc(var(--line-height) - var(--border-thickness));
   border-bottom: var(--border-thickness) solid var(--text-color);
-  background: var(--background-color);
 }
 
 h1 .header-section-number {
@@ -113,6 +102,7 @@ h2 {
   font-size: 1.25rem;
   font-variant: all-small-caps;
   font-weight: 450;
+  line-height: var(--line-height);
   letter-spacing: 0.125em;
 }
 
@@ -273,8 +263,8 @@ header p {
 
 p {
   word-break: break-word;
-  word-wrap: break-word;
   hyphens: auto;
+  hyphenate-limit-chars: 5;
 }
 
 img, video {
@@ -487,6 +477,7 @@ label input {
 }
 
 .toc-section-number {
+  height: 1rem;
   font-size: .875rem;
   font-weight: 500;
   letter-spacing: 0;
@@ -503,6 +494,8 @@ label input {
 }
 
 #TOC a {
+  display: block;
+  height: var(--line-height);
   text-decoration: none;
 }
 #TOC a:hover {
@@ -515,6 +508,6 @@ label input {
   width: 1%;
   text-align: center;
   vertical-align: baseline;
-  line-height: 3rem;
+  line-height: calc(var(--line-height) * 2);
   padding: 0;
 }

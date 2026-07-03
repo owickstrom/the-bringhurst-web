@@ -16,44 +16,45 @@ infamously error-prone. It could be nostalgia from my early days of programming
 web applications, or *Stockholm Syndrome* after years of captivity. Whatever
 the cause, [The Monospace Web](https://owickstrom.github.io/the-monospace-web/)
 was born out of that love, and it took off way harder than I ever thought it
-would.
+would, with many personal blogs and even application interfaces having adopted
+it.
 
-Here I am again, spending weekend off-hours in a form of meditative state
-writing <abbr>CSS</abbr> for no purpose at all. In this case, inspiration
-struck after reading Robert Bringhurst's classic *The Elements of Typographic
-Style*. A challenge indeed, trying to implement the layout and typography of
-the book itself in the browser. Reckless, some might say! Surely the same rules
-don't apply across print and web, and any such attempt is vanity or misguided
+So, here I am again, spending weekend off-hours in a form of meditative state
+writing <abbr>CSS</abbr> for no purpose at all. This time, inspiration struck
+after reading Robert Bringhurst's classic *The Elements of Typographic Style*.
+A challenge indeed, trying to implement the layout and typography of the book
+itself in the browser. Reckless, some might say! Surely the same rules don't
+apply across print and web, and any such attempt is vanity or misguided
 nostalgia. Perhaps, perhaps not. I've decided to publish regardless, and bid
 you to take from it what you will; if you find it pleasant or useful, that's a
 wonder, and if you find it cursed or pointless, you may leave it aside and
-enjoy the abundance of silver-gradient text on purple with which we are
+enjoy the abundance of silver-gradient sans-serif on purple with which we are
 bestowed.
 
 Consider this the spiritual and variable-width successor of *The Monospace
 Web*, and equally open for reuse. I'm a sucker for Pandoc, but it should work
-in many more settings with minor tweaks.
+in many other settings with minor tweaks.
 
 # Introduction
-
-## Thoughts & Reasons
-
-Lorem ipsum dolor sit amet, consectetur *adipiscing elit*. Sed vitae tortor ut
-arcu facilisis fermentum quis eget sem. Fusce pharetra velit nec nisi lacinia,
-vel dapibus nulla fermentum. Sed vitae metus fringilla, sodales ipsum nec,
-volutpat dolor. Nam euismod augue metus, et sollicitudin metus euismod ac.
-Quisque posuere euismod eros, non dapibus odio commodo vitae. Donec fermentum
-ex ut purus condimentum facilisis at pharetra velit. 
 
 > Typography is the craft of endowing human language with a durable visual form.
 > <cite>Robert Bringhurst</cite>
 
-Aliquam vestibulum turpis ornare ex tincidunt, placerat mollis neque fermentum.
-Suspendisse potenti. Quisque non ante velit. Sed tincidunt ultrices odio,
-euismod interdum lorem convallis a. Etiam eros odio, pretium et gravida et,
-feugiat sit amet enim. Aenean sed neque dictum, hendrerit enim dictum, accumsan
-velit. Mauris porta risus sed quam laoreet, ac porta ex lacinia. Praesent
-consectetur quam enim, sed faucibus orci congue a.
+## Type & Size
+
+In this document and its design, I'm using two variants of the *Alegreya* font.
+The regular variant is used for body text and third-level headings. Its
+small-caps variant, *Alegreya SC*, is used for titling-caps top-level headings,
+small-caps second-level headings, and for inline abbreviations such as
+<abbr>HTML</abbr>. Finally, *Courier Prime* is used for monospace code snippets.
+
+Bringhurst argues in his book for choosing a single versatile typeface rather
+than a hodgepodge of different ones. I think Alegreya is such a choice, and
+an excellent one at that.
+
+Every size is based on the root font size, which is 16px. Sizes are thus given
+in `rem` units, relative to the root font size. The following table shows how
+fractional, `rem`, and pixel measurements correlate.
 
 <figure>
 <table id="font-sizes">
@@ -79,7 +80,7 @@ consectetur quam enim, sed faucibus orci congue a.
         <td>11/8</td>
         <td>3/2</td>
         <td>2</td>
-        <td>5/6</td>
+        <td>5/2</td>
         <td>3</td>
         <td>4</td>
     </tr>
@@ -104,65 +105,31 @@ consectetur quam enim, sed faucibus orci congue a.
         <td>20</td>
         <td>22</td>
         <td>24</td>
-        <td>36</td>
-        <td>42</td>
+        <td>32</td>
+        <td>40</td>
         <td>48</td>
-        <td>72</td>
+        <td>64</td>
     </tr>
 </table>
 <figcaption>Standard font sizes in fractional and decimal <code>rem</code> units, along with their <code>px</code> equivalents.</figcaption>
 </figure>
 
-## First Principles
+The line height is 1.2rem, and is used as the basis for vertical alignment of
+all elements. Much like in *The Monospace Web* --- but not to the same extremes
+--- I've tried to get everything globally aligned to multiples of the line
+height.
 
-### Do the thing.
+## Justification & Indentation
 
-Sed scelerisque pretium velit consectetur ultricies. Maecenas dignissim dolor
-sed diam feugiat, sit amet iaculis felis hendrerit. Sed vestibulum dui sed sem
-cursus, non facilisis dolor rutrum. Duis tincidunt vestibulum mi et luctus.
-Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-ridiculus mus.
+As in the book, body text is justified, not ragged-right. To some, this is
+heresy on the web. *Thou shalt not justify.* That's what we've all been taught.
+But browsers have improved over time and today it's not unthinkable to justify
+text. This stylesheet uses `word-break` and `hyphens` to control how words are
+broken and hyphenated at line breaks. The `hyphenate-limit-chars` attribute is
+useful to control the bounds of hyphenation.
 
-Vivamus pharetra arcu a dui ultrices, non fermentum massa
-sollicitudin. Orci varius natoque penatibus et magnis dis parturient montes,
-nascetur ridiculus mus. Suspendisse imperdiet, dui a luctus dapibus, leo velit
-convallis augue, a malesuada ex leo eget justo. Integer nec malesuada eros.
-Curabitur mi quam, suscipit id enim sit amet, condimentum aliquam quam.
-Phasellus in elementum odio, ut efficitur tortor.
-
-### Do it well.
-
-Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-ridiculus mus. In rutrum, dolor a gravida dignissim, felis tortor laoreet odio,
-eget ornare lacus nunc ac lectus. Nulla quis nisl id mauris ultricies porttitor
-id quis ante. Donec vestibulum at lorem non rutrum. Etiam feugiat feugiat
-elementum. Etiam erat mauris, eleifend ac fermentum nec, accumsan nec nisi.
-Nullam eu consequat sapien. Proin lacinia vestibulum aliquam. Nunc dignissim
-nisi in metus tempus, porta consequat sapien auctor. Quisque congue, sem at
-congue tempus, libero nulla vestibulum justo, a facilisis magna erat eu ante.
-Curabitur posuere erat ut risus pharetra, convallis tempor erat volutpat.
-Integer lectus lectus, eleifend ut sagittis nec, rhoncus a est. Nulla non
-scelerisque nisl.
-
-### Do it every day.
-
-Aliquam interdum felis nunc, vitae accumsan ipsum ultricies finibus. Nullam
-dictum magna id justo ornare, quis aliquam nulla dignissim. Praesent vitae leo
-volutpat, consectetur enim nec, rutrum risus. Quisque rhoncus, lorem sed
-elementum condimentum, leo augue cursus felis, vitae molestie ipsum lacus sed
-massa. Aenean at elit ac erat facilisis placerat. Donec luctus arcu vel dictum
-hendrerit. Sed a lacinia arcu. Sed ullamcorper, massa sit amet feugiat
-tincidunt, neque ante varius urna, in porttitor nulla massa eu justo. Morbi
-eleifend est vitae elementum varius. Cras scelerisque augue ullamcorper mauris
-vestibulum maximus. Etiam ullamcorper sem nec arcu ultrices luctus nec eu
-tortor. Quisque fermentum libero eu ex pulvinar aliquet. Curabitur semper eu
-diam ac pellentesque. Donec hendrerit congue enim, at laoreet massa porta at.
-Maecenas eu augue mi.
-
-Nulla in tellus mauris. Cras aliquet quis ex quis ullamcorper. Suspendisse eu
-orci sit amet ligula imperdiet ultrices quis euismod ante. Fusce ut lobortis
-erat. Sed convallis est a cursus aliquam. Pellentesque a ultrices dui. Praesent
-mattis nisl eget metus imperdiet rhoncus.
+Also in line with tradition, each successive paragraph has an indent
+three character-widths, as measured by the `ch` unit.
 
 # Elements
 
