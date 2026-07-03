@@ -24,10 +24,12 @@
         {
           default = pkgs.mkShell {
             packages = with pkgs; [
-              live-server
               pandoc
               jq
               gnumake
+              watchexec
+              browser-sync
+              concurrently
             ];
           };
         }

@@ -9,34 +9,30 @@ toc-title: Contents
 
 # Foreword {.unnumbered}
 
-Legio <abbr>SQPR</abbr> castra ponebat trans flumen, ubi aquila aurea in vento stabat.
+Two summers ago, just before I started working at TigerBeetle, I picked up a
+new side project during downtime. I've always had a soft spot for
+<abbr>CSS</abbr> but I don't know why; frankly, it's weird, confusing, and
+infamously error-prone. It could be nostalgia from my early days of programming
+web applications, or *Stockholm Syndrome* after years of captivity. Whatever
+the cause, [The Monospace Web](https://owickstrom.github.io/the-monospace-web/)
+was born out of that love, and it took off way harder than I ever thought it
+would.
 
-Lorem ipsum dolor sit amet, consectetur *adipiscing elit*. Sed vitae tortor ut
-arcu facilisis fermentum quis eget sem. Fusce pharetra velit nec nisi lacinia,
-vel dapibus nulla fermentum. Sed vitae metus fringilla, sodales ipsum nec,
-volutpat dolor. Nam euismod augue metus, et sollicitudin metus euismod ac.
-Quisque posuere euismod eros, non dapibus odio commodo vitae. Donec fermentum
-ex ut purus condimentum facilisis at pharetra velit. 
+Here I am again, spending weekend off-hours in a form of meditative state
+writing <abbr>CSS</abbr> for no purpose at all. In this case, inspiration
+struck after reading Robert Bringhurst's classic *The Elements of Typographic
+Style*. A challenge indeed, trying to implement the layout and typography of
+the book itself in the browser. Reckless, some might say! Surely the same rules
+don't apply across print and web, and any such attempt is vanity or misguided
+nostalgia. Perhaps, perhaps not. I've decided to publish regardless, and bid
+you to take from it what you will; if you find it pleasant or useful, that's a
+wonder, and if you find it cursed or pointless, you may leave it aside and
+enjoy the abundance of silver-gradient text on purple with which we are
+bestowed.
 
-Aliquam vestibulum turpis ornare ex tincidunt, placerat mollis neque fermentum.
-Suspendisse potenti. Quisque non ante velit. Sed tincidunt ultrices odio,
-euismod interdum lorem convallis a. Etiam eros odio, pretium et gravida et,
-feugiat sit amet enim. Aenean sed neque dictum, hendrerit enim dictum, accumsan
-velit. Mauris porta risus sed quam laoreet, ac porta ex lacinia. Praesent
-consectetur quam enim, sed faucibus orci congue a.
-
-Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-ridiculus mus. In rutrum, dolor a gravida dignissim, felis tortor laoreet odio,
-eget ornare lacus nunc ac lectus. Nulla quis nisl id mauris ultricies porttitor
-id quis ante. Donec vestibulum at lorem non rutrum. Etiam feugiat feugiat
-elementum. Etiam erat mauris, eleifend ac fermentum nec, accumsan nec nisi.
-Nullam eu consequat sapien. Proin lacinia vestibulum aliquam. Nunc dignissim
-nisi in metus tempus, porta consequat sapien auctor. Quisque congue, sem at
-congue tempus, libero nulla vestibulum justo, a facilisis magna erat eu ante.
-Curabitur posuere erat ut risus pharetra, convallis tempor erat volutpat.
-Integer lectus lectus, eleifend ut sagittis nec, rhoncus a est. Nulla non
-scelerisque nisl.
-
+Consider this the spiritual and variable-width successor of *The Monospace
+Web*, and equally open for reuse. I'm a sucker for Pandoc, but it should work
+in many more settings with minor tweaks.
 
 # Introduction
 
