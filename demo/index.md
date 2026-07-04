@@ -28,8 +28,8 @@ apply across print and web, and any such attempt is vanity or misguided
 nostalgia. Perhaps, perhaps not. I've decided to publish regardless, and bid
 you to take from it what you will; if you find it pleasant or useful, that's a
 wonder, and if you find it cursed or pointless, you may leave it aside and
-enjoy the abundance of silver-gradient sans-serif on purple with which we are
-bestowed.
+enjoy the abundance of silver-gradient sans-serif on purple, or why not the
+dual-line slop-serif marketing pages, with which we are bestowed.
 
 Consider this the spiritual and variable-width successor of *The Monospace
 Web*, and equally open for reuse. I'm a sucker for Pandoc, but it should work
@@ -117,6 +117,17 @@ fractional, `rem`, and pixel measurements correlate.
 </table>
 <figcaption>Standard font sizes in fractional and decimal <code>rem</code> units, along with their <code>px</code> equivalents.</figcaption>
 </figure>
+
+Sizing everything based on the root font size makes it easy to scale the 
+design, for instance on smaller viewports:
+
+```css
+@media screen and (max-width: 480px) {
+  :root {
+    font-size: 14px;
+  }
+}
+```
 
 The line height is 1.2rem, and is used as the basis for vertical alignment of
 all elements. Much like in *The Monospace Web* --- but not to the same extremes

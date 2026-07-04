@@ -81,7 +81,8 @@ nostalgia. Perhaps, perhaps not. I’ve decided to publish regardless, and
 bid you to take from it what you will; if you find it pleasant or
 useful, that’s a wonder, and if you find it cursed or pointless, you may
 leave it aside and enjoy the abundance of silver-gradient sans-serif on
-purple with which we are bestowed.</p>
+purple, or why not the dual-line slop-serif marketing pages, with which
+we are bestowed.</p>
 <p>Consider this the spiritual and variable-width successor of <em>The
 Monospace Web</em>, and equally open for reuse. I’m a sucker for Pandoc,
 but it should work in many other settings with minor tweaks.</p>
@@ -262,6 +263,14 @@ Standard font sizes in fractional and decimal <code>rem</code> units,
 along with their <code>px</code> equivalents.
 </figcaption>
 </figure>
+<p>Sizing everything based on the root font size makes it easy to scale
+the design, for instance on smaller viewports:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> <span class="an">screen</span> <span class="kw">and</span> <span class="fu">(</span><span class="kw">max-width</span><span class="ch">:</span> <span class="dv">480</span><span class="dt">px</span><span class="fu">)</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="in">:root</span> {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">14</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>The line height is 1.2rem, and is used as the basis for vertical
 alignment of all elements. Much like in <em>The Monospace Web</em> — but
 not to the same extremes — I’ve tried to get everything globally aligned
@@ -373,16 +382,16 @@ Pyramid of Khafre
 </table>
 <h2 data-number="2.3" id="code-blocks"><span
 class="header-section-number">2.3</span> Code Blocks</h2>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--font-family</span><span class="ch">:</span> <span class="st">&quot;Alegreya&quot;</span><span class="op">,</span> <span class="dv">serif</span><span class="op">;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="va">--line-height</span><span class="ch">:</span> <span class="dv">1.2</span><span class="op">;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">--border-thickness</span><span class="ch">:</span> <span class="dv">1.5</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-color</span><span class="ch">:</span> <span class="cn">#000</span><span class="op">;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-color-alt</span><span class="ch">:</span> <span class="cn">#666</span><span class="op">;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="va">--background-color</span><span class="ch">:</span> <span class="cn">#fff</span><span class="op">;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="va">--background-color-alt</span><span class="ch">:</span> <span class="cn">#eee</span><span class="op">;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--font-family</span><span class="ch">:</span> <span class="st">&quot;Alegreya&quot;</span><span class="op">,</span> <span class="dv">serif</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="va">--line-height</span><span class="ch">:</span> <span class="dv">1.2</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">--border-thickness</span><span class="ch">:</span> <span class="dv">1.5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-color</span><span class="ch">:</span> <span class="cn">#000</span><span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-color-alt</span><span class="ch">:</span> <span class="cn">#666</span><span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="va">--background-color</span><span class="ch">:</span> <span class="cn">#fff</span><span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="va">--background-color-alt</span><span class="ch">:</span> <span class="cn">#eee</span><span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
   <div class="debug-grid"></div>
   <script src="src/index.js"></script>
 </body>
