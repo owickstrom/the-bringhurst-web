@@ -48,6 +48,12 @@ in many other settings with minor tweaks.
 
 ### A single versatile font as the basis of the design
 
+<aside tabindex="0">
+While this isn't the most lightweight CSS ever imagined, I am mindful
+of the amount of bytes needing to be transmitted before you see something
+decent. The stylesheets are around 10kB and the fonts are just shy of 200kB.
+</aside>
+
 In this document and its design, I'm using two variants of the *Alegreya* font.
 The regular variant is used for body text and third-level headings. Its
 small-caps variant, *Alegreya SC*, is used for titling-caps top-level headings,
@@ -190,7 +196,7 @@ There's no clear guidance on horizontal line breaks in Bringhurst's book, but
 it seems to me like a good place for ornamentation. Here's one:
 
 <div class="example">
-<hr>
+<hr />
 </div>
 
 The symbol used is U+2767 [Rotated Floral Heart Bullet]{.name} from the Unicode
@@ -207,9 +213,22 @@ We can hide stuff in the `<details`> element. Click the label below:
 </details>
 </div>
 
+## Asides
+
+<aside tabindex="0">
+This is the contents of the aside element, shown in a smaller font size and in the
+right margin, with ragged-right text alignment.
+</aside>
+
+The book uses plenty of side notes. In <abbr>HTML</abbr> we define those using
+`<aside>` elements. Along with this paragraph there's a side note. With a large
+enough viewport, you'll see it in the right margin; with a smaller viewport,
+it'll be collapsed into an asterisk-like character that you can hover to expand
+it.
+
 ## Names
 
-Proper nouns and places names are wrapped in `<span class="name">`,
+Proper nouns and place names are wrapped in `<span class="name">`,
 rendered as small-caps much like in the example from the book:
 
 <div class="example">
