@@ -209,7 +209,7 @@ We can hide stuff in the `<details`> element. Click the label below:
 
 ## Names
 
-Proper nouns and places names are wrapped in `<span class="name">...</span>`,
+Proper nouns and places names are wrapped in `<span class="name">`,
 rendered as small-caps much like in the example from the book:
 
 <div class="example">
@@ -269,7 +269,7 @@ Ordered lists look pretty much as you'd expect:
 ## Tables
 
 Tabular data is presented with a strong table head, using small-caps labels and
-a border:
+a border. Otherwise it's very simple, relying only on spacing.
 
 <div class="example">
 <table>
