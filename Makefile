@@ -1,18 +1,35 @@
 VERSION=$(shell jq -r .version package.json)
 DATE=$(shell date +%F)
 
-all: index.html
+all: index.html index.css
 
 clean:
 	rm -f index.html
 
-index.html: demo/index.md demo/template.html Makefile
-	pandoc --toc --toc-depth=2 -s --number-sections --number-offset=0 --css src/reset.css --css src/index.css -Vversion=v$(VERSION) -Vdate=$(DATE) -i $< -o $@ --template=demo/template.html
+index.html: src/demo/index.md Makefile
+	pandoc \
+		--toc --toc-depth=2 \
+		-s \
+		--number-sections --number-offset=0 \
+		--css src/index.css \
+		-M document-css=false \
+		-V 'header-includes=<script src="index.js"></script>' \
+		--template=src/demo/template.html \
+ 		-Vversion=v$(VERSION) -Vdate=$(DATE) \
+		-i $< \
+		-o $@
+
+index.css: src/index.css src/reset.css
+	esbuild \
+		--banner "/* By Oskar Wickström\nLicensed under the MIT License (https://github.com/owickstrom/the-bringhurst-web/blob/main/LICENSE.md)\n*/" \
+		--bundle --minify \
+		$< \
+		> $@
 
 dev: clean all
 	@concurrently -n serve,watch \
 		"browser-sync start --server $(TARGET_DIR) --port 8000 --no-open --files './**/*'" \
-		"watchexec -w src -w demo -e css,html,js,md,yaml,lua make"
+		"watchexec -w src -w src -e css,html,js,md,yaml,lua make"
 
 .PHONY: all clean dev
 

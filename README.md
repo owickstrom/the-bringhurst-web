@@ -1,8 +1,12 @@
-# Elements of Web Typography
+# The Bringhurst Web
 
-TODO
+A web adaptation of *The Elements of Typographical Style*
 
-https://owickstrom.github.io/elements-of-web-typography/
+<hr>
+
+The purpose, usage, and implementation of this project is documented at:
+
+https://owickstrom.github.io/the-bringhurst-web/
 
 ## Build
 

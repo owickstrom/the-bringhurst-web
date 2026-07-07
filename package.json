@@ -1,14 +1,14 @@
 {
-  "name": "elements-of-typography",
+  "name": "the-bringhurst-web",
   "version": "0.1.0",
   "description": "TODO",
-  "homepage": "https://github.com/owickstrom/elements-of-web-typography#readme",
+  "homepage": "https://github.com/owickstrom/the-bringhurst-web#readme",
   "bugs": {
-    "url": "https://github.com/owickstrom/elements-of-web-typography/issues"
+    "url": "https://github.com/owickstrom/the-bringhurst-web/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/owickstrom/elements-of-web-typography.git"
+    "url": "git+https://github.com/owickstrom/the-bringhurst-web.git"
   },
   "license": "MIT",
   "author": "Oskar Wickström",

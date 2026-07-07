@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Oskar Wickström" />
   <title>The Bringhurst Web</title>
-  <link rel="stylesheet" href="src/reset.css" />
   <link rel="stylesheet" href="src/index.css" />
+  <script src="index.js"></script>
 </head>
 <body>
 <header>
   <h1 class="title">The Bringhurst Web</h1>
   <p class="subtitle">A web adaptation of <em>The Elements of
 Typographical Style</em></span>
-<p>Authored by <a href="https://wickstrom.tech"><cite>Oskar
-Wickström</cite></a>. <span class="version">v0.1.0</span>, licensed under <a><abbr>MIT</abbr></a>.</p>
+<p>Authored by <cite><a href="https://wickstrom.tech">Oskar
+Wickström</a></cite>. <span class="version">v0.1.0</span>, licensed under <a><abbr>MIT</abbr></a>.</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <h2 id="toc-title">Contents</h2>
@@ -54,6 +54,15 @@ class="toc-section-number">2.9</span> Tables</a></li>
 <li><a href="#code-blocks" id="toc-code-blocks"><span
 class="toc-section-number">2.10</span> Code Blocks</a></li>
 </ul></li>
+<li><a href="#usage" id="toc-usage"><span
+class="toc-section-number">3</span> Usage</a>
+<ul class="incremental">
+<li><a href="#purpose" id="toc-purpose"><span
+class="toc-section-number">3.1</span> Purpose</a></li>
+<li><a href="#getting-started" id="toc-getting-started"><span
+class="toc-section-number">3.2</span> Getting started</a></li>
+</ul></li>
+<li><a href="#colophon" id="toc-colophon">Colophon</a></li>
 </ul>
 </nav>
 <h1 class="unnumbered" id="foreword">Foreword</h1>
@@ -100,12 +109,13 @@ id="a-single-versatile-font-as-the-basis-of-the-design"><span
 class="header-section-number">1.1.1</span> A single versatile font as
 the basis of the design</h3>
 <p>In this document and its design, I’m using two variants of the <span
-class="name">Alegreya</span> font. The regular variant is used for body
-text and third-level headings. Its small-caps variant, <span
-class="name">Alegreya SC</span>, is used for titling-caps top-level
-headings, small-caps second-level headings, and for inline abbreviations
-such as <abbr>HTML</abbr>. Finally, <span class="name">Courier
-Prime</span> is used for monospace code snippets.</p>
+class="canonical-name">Alegreya</span> font. The regular variant is used
+for body text and third-level headings. Its small-caps variant, <span
+class="canonical-name">Alegreya SC</span>, is used for titling-caps
+top-level headings, small-caps second-level headings, and for inline
+abbreviations such as <abbr>HTML</abbr>. Finally, <span
+class="canonical-name">Courier Prime</span> is used for monospace code
+snippets.</p>
 <aside>
 While this isn’t the most lightweight CSS ever imagined, I am mindful of
 the amount of bytes needing to be transmitted before you see something
@@ -114,8 +124,8 @@ decent. The stylesheets are around 10kB and the fonts are just shy of
 </aside>
 <p>Bringhurst argues in his book for choosing a single versatile
 typeface rather than a hodgepodge of different ones. I think <span
-class="name">Alegreya</span> is such a choice, and an excellent one at
-that.</p>
+class="canonical-name">Alegreya</span> is such a choice, and an
+excellent one at that.</p>
 <h3 data-number="1.1.2"
 id="a-sizing-system-built-on-relative-measurements"><span
 class="header-section-number">1.1.2</span> A sizing system built on
@@ -337,8 +347,8 @@ one:</p>
 <figure class="example">
 <hr />
 </figure>
-<p>The symbol used is U+2767 <span class="name">Rotated Floral Heart
-Bullet</span> from the Unicode <em>Dingbats</em> block.</p>
+<p>The symbol used is U+2767 <span class="canonical-name">Rotated Floral
+Heart Bullet</span> from the Unicode <em>Dingbats</em> block.</p>
 <h2 data-number="2.3" id="details"><span
 class="header-section-number">2.3</span> Details</h2>
 <p>We can hide stuff in the <code>&lt;details</code>&gt; element. Click
@@ -358,23 +368,24 @@ class="header-section-number">2.4</span> Asides</h2>
 <p>The book uses plenty of side notes. In <abbr>HTML</abbr> we define
 those using <code>&lt;aside&gt;</code> elements. Along with this
 paragraph there’s a side note. With a large enough viewport, you’ll see
-it in the right margin; with a smaller viewport, it’ll be collapsed into
-an inline paragraph with ornamentation.</p>
+it in the right margin, aligned with the top of the previous paragraph;
+with a smaller viewport, it’ll be collapsed into an inline paragraph
+with ornamentation.</p>
 <aside>
 This is the contents of the aside element, shown in a smaller font size
-and in the right margin (or inline in a smaller viewport), with
-ragged-right text alignment.
+and with ragged-right text alignment.
 </aside>
 <h2 data-number="2.5" id="names"><span
 class="header-section-number">2.5</span> Names</h2>
-<p>Proper nouns and place names are wrapped in
-<code>&lt;span class="name"&gt;</code>, rendered as small-caps much like
+<p>Proper nouns and canonical names, distinguished using the
+<code>.canonical-name</code> class, are rendered as small-caps much like
 in the example from the book:</p>
 <figure class="example">
-… on the islands of <span class="name">Lombok</span>, <span
-class="name">Bali</span>, <span class="name">Flores</span>, <span
-class="name">Timor</span> and <span class="name">Sulawesi</span>, the
-same textiles …
+… on the islands of <span class="canonical-name">Lombok</span>, <span
+class="canonical-name">Bali</span>, <span
+class="canonical-name">Flores</span>, <span
+class="canonical-name">Timor</span> and <span
+class="canonical-name">Sulawesi</span>, the same textiles …
 </figure>
 <h2 data-number="2.6" id="blockquotes"><span
 class="header-section-number">2.6</span> Blockquotes</h2>
@@ -396,7 +407,7 @@ class="header-section-number">2.7</span> Figures</h2>
 blockquotes, <em>author</em> and <em>work</em> are styled specifically
 using small-caps and italic text.</p>
 <figure>
-<img src="demo/vitruvian-man.jpg" width="435" />
+<img src="src/demo/vitruvian-man.jpg" width="435" />
 <figcaption>
 <span class="author">Leonardo Da Vinci</span>, <cite>Vitruvian
 Man</cite>, <span>c. 1490, pen and watercolor over metalpoint on paper,
@@ -479,6 +490,13 @@ Pyramid of Khafre
 </figure>
 <h2 data-number="2.10" id="code-blocks"><span
 class="header-section-number">2.10</span> Code Blocks</h2>
+<p>This design is geared towards prose, not code-heavy technical
+writing, but code blocks and inline code should read well nonetheless.
+The font choice of <span class="canonical-name">Courier Prime</span>
+might feel a bit typewriter-nostalgic, but I find it goes very well with
+<span class="canonical-name">Alegreya</span> and the overall feel I’m
+aiming for. Here’s some code from this page’s <code>index.css</code>
+file:</p>
 <figure class="example">
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
@@ -489,7 +507,47 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#c
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="va">--background-color</span><span class="ch">:</span> <span class="cn">#fff</span><span class="op">;</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </figure>
-  <div class="debug-grid"></div>
-  <script src="src/index.js"></script>
+<h1 data-number="3" id="usage"><span
+class="header-section-number">3</span> Usage</h1>
+<blockquote>
+Immature poets imitate; mature poets steal.
+<footer>
+<span class="author">T.S. Eliot</span>, <cite>The Sacred Wood</cite>,
+<span class="year">1920</span>
+</footer>
+</blockquote>
+<h2 data-number="3.1" id="purpose"><span
+class="header-section-number">3.1</span> Purpose</h2>
+<p>This design is meant for web documents comprised mainly of prose:
+books, journals, blogs, manuals, and the like. You might use this as a
+basis for your personal website, a specific project, or maybe a larger
+wiki. You probably don’t want it in a dynamic web application.</p>
+<p>Copy or fork what you want, modify it to your heart’s content, but
+don’t forget proper attribution. The sources have license information in
+their headers, so it’s easy as keeping those around.</p>
+<h2 data-number="3.2" id="getting-started"><span
+class="header-section-number">3.2</span> Getting started</h2>
+<p>To get started quickly, add these to the <code>head</code> element of
+your HTML:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://owickstrom.github.io/the-bringhurst-web/index.css&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div>
+<p>If you’re using Pandoc, download the sources, put it in your project
+as <code>the-bringhurst-web</code>, and invoke it with some thing like
+the following set of arguments:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="dt">\</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">--toc</span> <span class="at">--toc-depth</span><span class="op">=</span>2 <span class="dt">\</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">-s</span> <span class="dt">\</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">--number-sections</span> <span class="at">--number-offset</span><span class="op">=</span>0 <span class="dt">\</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">--css</span> the-bringhurst-web/index.css <span class="dt">\</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">-V</span><span class="st">&#39;header-includes=&lt;script src=&quot;index.js&quot;&gt;&lt;/script&gt;&#39;</span> <span class="dt">\</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">--no-highlight</span> <span class="dt">\</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>   <span class="at">-i</span> index.md <span class="dt">\</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>   <span class="at">-o</span> index.html</span></code></pre></div>
+<p>If you do need syntax highlighting, consider using a custom template
+like the one in the used for this HTML output, stripping away the
+default CSS included by Pandoc.</p>
+<h1 class="unnumbered" id="colophon">Colophon</h1>
+<p>TODO: credits and such</p>
 </body>
 </html>

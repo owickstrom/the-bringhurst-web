@@ -1,8 +1,7 @@
 ---
 title: The Bringhurst Web
 subtitle: A web adaptation of *The Elements of Typographical Style*
-author: Oskar Wickström
-author-url: "https://wickstrom.tech"
+author: '[Oskar Wickström](https://wickstrom.tech)'
 lang: en
 toc-title: Contents
 ---
@@ -49,11 +48,11 @@ other settings with minor tweaks.
 ### A single versatile font as the basis of the design
 
 In this document and its design, I'm using two variants of the
-[Alegreya]{.name} font. The regular variant is used for body text and
-third-level headings. Its small-caps variant, [Alegreya SC]{.name}, is used for
-titling-caps top-level headings, small-caps second-level headings, and for
-inline abbreviations such as <abbr>HTML</abbr>. Finally, [Courier Prime]{.name}
-is used for monospace code snippets.
+[Alegreya]{.canonical-name} font. The regular variant is used for body text and
+third-level headings. Its small-caps variant, [Alegreya SC]{.canonical-name},
+is used for titling-caps top-level headings, small-caps second-level headings,
+and for inline abbreviations such as <abbr>HTML</abbr>. Finally, [Courier
+Prime]{.canonical-name} is used for monospace code snippets.
 
 <aside>
 While this isn't the most lightweight CSS ever imagined, I am mindful
@@ -62,8 +61,8 @@ decent. The stylesheets are around 10kB and the fonts are just shy of 200kB.
 </aside>
 
 Bringhurst argues in his book for choosing a single versatile typeface rather
-than a hodgepodge of different ones. I think [Alegreya]{.name} is such a
-choice, and an excellent one at that.
+than a hodgepodge of different ones. I think [Alegreya]{.canonical-name} is
+such a choice, and an excellent one at that.
 
 ### A sizing system built on relative measurements
 
@@ -200,8 +199,8 @@ it seems to me like a good place for ornamentation. Here's one:
 <hr />
 </figure>
 
-The symbol used is U+2767 [Rotated Floral Heart Bullet]{.name} from the Unicode
-*Dingbats* block.
+The symbol used is U+2767 [Rotated Floral Heart Bullet]{.canonical-name} from
+the Unicode *Dingbats* block.
 
 ## Details
 
@@ -218,23 +217,23 @@ We can hide stuff in the `<details`> element. Click the label below:
 
 The book uses plenty of side notes. In <abbr>HTML</abbr> we define those using
 `<aside>` elements. Along with this paragraph there's a side note. With a large
-enough viewport, you'll see it in the right margin; with a smaller viewport,
-it'll be collapsed into an inline paragraph with ornamentation.
+enough viewport, you'll see it in the right margin, aligned with the top of the
+previous paragraph; with a smaller viewport, it'll be collapsed into an inline
+paragraph with ornamentation.
 
 <aside>
-This is the contents of the aside element, shown in a smaller font size and in the
-right margin (or inline in a smaller viewport), with ragged-right text alignment.
+This is the contents of the aside element, shown in a smaller font size and with ragged-right text alignment.
 </aside>
 
 
 ## Names
 
-Proper nouns and place names are wrapped in `<span class="name">`,
-rendered as small-caps much like in the example from the book:
+Proper nouns and canonical names, distinguished using the `.canonical-name`
+class, are rendered as small-caps much like in the example from the book:
 
 <figure class="example">
-... on the islands of [Lombok]{.name}, [Bali]{.name}, [Flores]{.name},
-[Timor]{.name} and [Sulawesi]{.name}, the same textiles ...
+... on the islands of [Lombok]{.canonical-name}, [Bali]{.canonical-name}, [Flores]{.canonical-name},
+[Timor]{.canonical-name} and [Sulawesi]{.canonical-name}, the same textiles ...
 </figure>
 
 ## Blockquotes
@@ -257,7 +256,7 @@ respectively. Similar to blockquotes, *author* and *work* are styled
 specifically using small-caps and italic text.
 
 <figure>
-    <img src="demo/vitruvian-man.jpg" width="435" />
+    <img src="src/demo/vitruvian-man.jpg" width="435" />
     <figcaption>
         <span class="author">Leonardo Da Vinci</span>,
         <cite>Vitruvian Man</cite>, 
@@ -321,6 +320,12 @@ a border. Otherwise it's very simple, relying only on spacing.
 
 ## Code Blocks
 
+This design is geared towards prose, not code-heavy technical writing, but code
+blocks and inline code should read well nonetheless. The font choice of
+[Courier Prime]{.canonical-name} might feel a bit typewriter-nostalgic, but I
+find it goes very well with [Alegreya]{.canonical-name} and the overall feel
+I'm aiming for. Here's some code from this page's `index.css` file:
+
 <figure class="example">
 ```css
 :root {
@@ -332,3 +337,55 @@ a border. Otherwise it's very simple, relying only on spacing.
 }
 ```
 </figure>
+
+# Usage
+
+> Immature poets imitate; mature poets steal.
+> <footer>
+>   <span class="author">T.S. Eliot</span>,
+>   <cite>The Sacred Wood</cite>,
+>   <span class="year">1920</span>
+> </footer>
+
+## Purpose
+
+This design is meant for web documents comprised mainly of prose: books,
+journals, blogs, manuals, and the like. You might use this as a basis for your
+personal website, a specific project, or maybe a larger wiki. You probably
+don't want it in a dynamic web application.
+
+Copy or fork what you want, modify it to your heart's content, but don't forget
+proper attribution. The sources have license information in their headers, so
+it's easy as keeping those around.
+
+## Getting started
+
+To get started quickly, add these to the `head` element of your HTML:
+
+```html
+<link rel="stylesheet" href="https://owickstrom.github.io/the-bringhurst-web/index.css" />
+```
+
+If you're using Pandoc, download the sources, put it in your project as
+`the-bringhurst-web`, and invoke it with some thing like the following set of
+arguments:
+
+```bash
+pandoc \
+    --toc --toc-depth=2 \
+    -s \
+    --number-sections --number-offset=0 \
+    --css the-bringhurst-web/index.css \
+    -V'header-includes=<script src="index.js"></script>' \
+    --no-highlight \
+   -i index.md \
+   -o index.html
+```
+
+If you do need syntax highlighting, consider using a custom
+template like the one in the used for this HTML output,
+stripping away the default CSS included by Pandoc.
+
+# Colophon {.unnumbered}
+
+TODO: credits and such
