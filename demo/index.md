@@ -1,5 +1,5 @@
 ---
-title: bringhurst.css
+title: The Bringhurst Web
 subtitle: A web adaptation of *The Elements of Typographical Style*
 author: Oskar Wickström
 author-url: "https://wickstrom.tech"
@@ -31,9 +31,9 @@ wonder, and if you find it cursed or pointless, you may leave it aside and
 enjoy the abundance of silver-gradient sans-serif on purple, or why not the
 dual-line slop-serif marketing pages, with which we are bestowed.
 
-Consider this the spiritual and variable-width successor of *The Monospace
-Web*, and equally open for reuse. I'm a sucker for Pandoc, but it should work
-in many other settings with minor tweaks.
+Consider this the spiritual and variable-width sequel of *The Monospace Web*,
+and equally open for reuse. I'm a sucker for Pandoc, but it should work in many
+other settings with minor tweaks.
 
 # Foundations
 
@@ -187,18 +187,18 @@ width of the text.
 There's no surprise here; text in `<em>` tags is italicized, just as you'd
 expect:
 
-<div class="example">
+<figure class="example">
   Do you think I can stay to become <em>nothing</em> to you?
-</div>
+</figure>
 
 ## Horizontal line breaks
 
 There's no clear guidance on horizontal line breaks in Bringhurst's book, but
 it seems to me like a good place for ornamentation. Here's one:
 
-<div class="example">
+<figure class="example">
 <hr />
-</div>
+</figure>
 
 The symbol used is U+2767 [Rotated Floral Heart Bullet]{.name} from the Unicode
 *Dingbats* block.
@@ -207,12 +207,12 @@ The symbol used is U+2767 [Rotated Floral Heart Bullet]{.name} from the Unicode
 
 We can hide stuff in the `<details`> element. Click the label below:
 
-<div class="example">
+<figure class="example">
 <details>
 <summary>A short summary of the contents</summary>
 <p>Hidden gems.</p>
 </details>
-</div>
+</figure>
 
 ## Asides
 
@@ -232,10 +232,10 @@ right margin (or inline in a smaller viewport), with ragged-right text alignment
 Proper nouns and place names are wrapped in `<span class="name">`,
 rendered as small-caps much like in the example from the book:
 
-<div class="example">
+<figure class="example">
 ... on the islands of [Lombok]{.name}, [Bali]{.name}, [Flores]{.name},
 [Timor]{.name} and [Sulawesi]{.name}, the same textiles ...
-</div>
+</figure>
 
 ## Blockquotes
 
@@ -265,33 +265,37 @@ specifically using small-caps and italic text.
     </figcaption>
 </figure>
 
+The captions are set in a smaller size, 0.875rem, matching the side notes. This
+clarifies the distinction between primary and secondary content.
+
+
 ## Lists
 
 This is a plain old bulleted list:
 
-<div class="example">
+<figure class="example">
 * Banana
 * Paper boat
 * Cucumber
 * Rocket
-</div>
+</figure>
 
 Ordered lists look pretty much as you'd expect:
 
-<div class="example">
+<figure class="example">
 1. Goals
 1. Motivations
     1. Intrinsic
     1. Extrinsic
 1. Second-order effects
-</div>
+</figure>
 
 ## Tables
 
 Tabular data is presented with a strong table head, using small-caps labels and
 a border. Otherwise it's very simple, relying only on spacing.
 
-<div class="example">
+<figure class="example">
 <table>
 <thead>
   <tr>
@@ -313,11 +317,11 @@ a border. Otherwise it's very simple, relying only on spacing.
   </tr>
 </tbody>
 </table>
-</div>
+</figure>
 
 ## Code Blocks
 
-<div class="example">
+<figure class="example">
 ```css
 :root {
   --font-family: "Alegreya", serif;
@@ -327,4 +331,4 @@ a border. Otherwise it's very simple, relying only on spacing.
   --background-color: #fff;
 }
 ```
-</div>
+</figure>

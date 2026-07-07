@@ -5,13 +5,13 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Oskar Wickström" />
-  <title>bringhurst.css</title>
+  <title>The Bringhurst Web</title>
   <link rel="stylesheet" href="src/reset.css" />
   <link rel="stylesheet" href="src/index.css" />
 </head>
 <body>
 <header>
-  <h1 class="title">bringhurst.css</h1>
+  <h1 class="title">The Bringhurst Web</h1>
   <p class="subtitle">A web adaptation of <em>The Elements of
 Typographical Style</em></span>
 <p>Authored by <a href="https://wickstrom.tech"><cite>Oskar
@@ -80,7 +80,7 @@ useful, that’s a wonder, and if you find it cursed or pointless, you may
 leave it aside and enjoy the abundance of silver-gradient sans-serif on
 purple, or why not the dual-line slop-serif marketing pages, with which
 we are bestowed.</p>
-<p>Consider this the spiritual and variable-width successor of <em>The
+<p>Consider this the spiritual and variable-width sequel of <em>The
 Monospace Web</em>, and equally open for reuse. I’m a sucker for Pandoc,
 but it should work in many other settings with minor tweaks.</p>
 <h1 data-number="1" id="foundations"><span
@@ -326,24 +326,24 @@ normal use they’d span the full width of the text.</p>
 class="header-section-number">2.1</span> Emphasis</h2>
 <p>There’s no surprise here; text in <code>&lt;em&gt;</code> tags is
 italicized, just as you’d expect:</p>
-<div class="example">
-<p>Do you think I can stay to become <em>nothing</em> to you?</p>
-</div>
+<figure class="example">
+Do you think I can stay to become <em>nothing</em> to you?
+</figure>
 <h2 data-number="2.2" id="horizontal-line-breaks"><span
 class="header-section-number">2.2</span> Horizontal line breaks</h2>
 <p>There’s no clear guidance on horizontal line breaks in Bringhurst’s
 book, but it seems to me like a good place for ornamentation. Here’s
 one:</p>
-<div class="example">
+<figure class="example">
 <hr />
-</div>
+</figure>
 <p>The symbol used is U+2767 <span class="name">Rotated Floral Heart
 Bullet</span> from the Unicode <em>Dingbats</em> block.</p>
 <h2 data-number="2.3" id="details"><span
 class="header-section-number">2.3</span> Details</h2>
 <p>We can hide stuff in the <code>&lt;details</code>&gt; element. Click
 the label below:</p>
-<div class="example">
+<figure class="example">
 <details>
 <summary>
 A short summary of the contents
@@ -352,7 +352,7 @@ A short summary of the contents
 Hidden gems.
 </p>
 </details>
-</div>
+</figure>
 <h2 data-number="2.4" id="asides"><span
 class="header-section-number">2.4</span> Asides</h2>
 <p>The book uses plenty of side notes. In <abbr>HTML</abbr> we define
@@ -370,12 +370,12 @@ class="header-section-number">2.5</span> Names</h2>
 <p>Proper nouns and place names are wrapped in
 <code>&lt;span class="name"&gt;</code>, rendered as small-caps much like
 in the example from the book:</p>
-<div class="example">
-<p>… on the islands of <span class="name">Lombok</span>, <span
+<figure class="example">
+… on the islands of <span class="name">Lombok</span>, <span
 class="name">Bali</span>, <span class="name">Flores</span>, <span
 class="name">Timor</span> and <span class="name">Sulawesi</span>, the
-same textiles …</p>
-</div>
+same textiles …
+</figure>
 <h2 data-number="2.6" id="blockquotes"><span
 class="header-section-number">2.6</span> Blockquotes</h2>
 <p>Bringhurst talks about various ways of typesetting quotations, and
@@ -405,19 +405,22 @@ href="https://en.wikipedia.org/wiki/File:VitruvianMan_Leonardo_a.jpg">Wikimedia
 Commons</a>)</span>
 </figcaption>
 </figure>
+<p>The captions are set in a smaller size, 0.875rem, matching the side
+notes. This clarifies the distinction between primary and secondary
+content.</p>
 <h2 data-number="2.8" id="lists"><span
 class="header-section-number">2.8</span> Lists</h2>
 <p>This is a plain old bulleted list:</p>
-<div class="example">
+<figure class="example">
 <ul class="incremental">
 <li>Banana</li>
 <li>Paper boat</li>
 <li>Cucumber</li>
 <li>Rocket</li>
 </ul>
-</div>
+</figure>
 <p>Ordered lists look pretty much as you’d expect:</p>
-<div class="example">
+<figure class="example">
 <ol class="incremental" type="1">
 <li>Goals</li>
 <li>Motivations
@@ -427,13 +430,13 @@ class="header-section-number">2.8</span> Lists</h2>
 </ol></li>
 <li>Second-order effects</li>
 </ol>
-</div>
+</figure>
 <h2 data-number="2.9" id="tables"><span
 class="header-section-number">2.9</span> Tables</h2>
 <p>Tabular data is presented with a strong table head, using small-caps
 labels and a border. Otherwise it’s very simple, relying only on
 spacing.</p>
-<div class="example">
+<figure class="example">
 <table>
 <thead>
 <tr>
@@ -473,10 +476,10 @@ Pyramid of Khafre
 </tr>
 </tbody>
 </table>
-</div>
+</figure>
 <h2 data-number="2.10" id="code-blocks"><span
 class="header-section-number">2.10</span> Code Blocks</h2>
-<div class="example">
+<figure class="example">
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--font-family</span><span class="ch">:</span> <span class="st">&quot;Alegreya&quot;</span><span class="op">,</span> <span class="dv">serif</span><span class="op">;</span></span>
@@ -485,7 +488,7 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#c
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-color</span><span class="ch">:</span> <span class="cn">#000</span><span class="op">;</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="va">--background-color</span><span class="ch">:</span> <span class="cn">#fff</span><span class="op">;</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-</div>
+</figure>
   <div class="debug-grid"></div>
   <script src="src/index.js"></script>
 </body>

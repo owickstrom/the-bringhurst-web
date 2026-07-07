@@ -58,6 +58,8 @@ body {
   overflow-x: hidden;
 }
 
+/* This breakpoint is for when the side notes fit in the right-side margin,
+ * i.e. (66ch + 2*3ch + 2*20ch). */
 @media screen and (min-width: 112ch) {
   html {
     align-items: center;
@@ -209,7 +211,7 @@ blockquote footer > * {
 }
 blockquote .author {
   font-family: 'Alegreya SC', serif;
-  font-size: 1.125rem;
+  font-size: 1.125em;
   font-variant: all-small-caps;
   font-weight: 450;
   line-height: var(--line-height);
@@ -252,7 +254,7 @@ th, td {
 }
 
 th {
-  font-size: 1.125rem;
+  font-size: 1.125em;
   font-variant: all-small-caps;
   font-weight: 500;
   letter-spacing: 0.0875em;
@@ -389,9 +391,15 @@ code {
 }
 
 figure {
-  margin: calc(var(--line-height) * 2) 3ch;
+  margin: calc(var(--line-height) * 2) var(--horizontal-margin);
   overflow-x: auto;
   overflow-y: hidden;
+}
+figure > *:first-child {
+  margin-top: 0;
+}
+figure > *:last-child {
+  margin-bottom: 0;
 }
 
 figcaption {
@@ -401,7 +409,7 @@ figcaption {
 }
 figcaption .author {
   font-family: 'Alegreya SC', serif;
-  font-size: 1.125rem;
+  font-size: 1.125em;
   font-variant: all-small-caps;
   font-weight: 450;
   line-height: var(--line-height);
@@ -459,7 +467,7 @@ li::marker {
 
 span.name {
   font-family: 'Alegreya SC', serif;
-  font-size: 1.125rem;
+  font-size: 1.125em;
   font-variant: all-small-caps;
   font-weight: 450;
   line-height: var(--line-height);
@@ -502,6 +510,6 @@ span.name {
   padding: 0;
 }
 
-.example {
-  padding: 0 3ch;
+figure.example {
+  margin: var(--line-height) var(--horizontal-margin);
 }
