@@ -1,0 +1,15 @@
+#font-sizes td {
+  width: 1%;
+  text-align: center;
+  vertical-align: baseline;
+  line-height: calc(var(--line-height) * 2);
+  padding: 0;
+}
+
+figure.example {
+  margin: var(--line-height) var(--horizontal-margin);
+}
+.example details p {
+  text-indent: 0;
+  margin-bottom: var(--line-height);
+}

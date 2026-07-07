@@ -12,6 +12,7 @@ index.html: src/demo/index.md Makefile
 		-s \
 		--number-sections --number-offset=0 \
 		--css src/index.css \
+		--css src/demo/demo.css \
 		-M document-css=false \
 		-V 'header-includes=<script src="index.js"></script>' \
 		--template=src/demo/template.html \
