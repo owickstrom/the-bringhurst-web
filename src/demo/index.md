@@ -144,12 +144,13 @@ height.
 
 ### Justified text in modern browsers
 
-As in the book, body text is justified, not ragged right. To some, this is
-grave heresy on the web. *Thou shalt not justify.* That's what we've all been
-taught. But browsers have improved over time and today it's not unthinkable to
-justify text. This stylesheet uses `word-break` and `hyphens` to control how
-words are broken and hyphenated at line breaks. The `hyphenate-limit-chars`
-property is useful to control the bounds of hyphenation.
+As in Bringhurst's book, body text is justified, not ragged right. To some,
+this is grave heresy on the web. *Thou shalt not justify.* That's what we've
+all been taught. But browsers have improved over time and today it's not
+unthinkable to justify text. This stylesheet uses `word-break` and `hyphens` to
+control how words are broken and hyphenated at line breaks. The
+`hyphenate-limit-chars` property is useful to control the bounds of
+hyphenation.
 
 The risk is of course getting horrible word spacing and *rivers* of whitespace
 in your paragraphs. If justified text doesn't work for your uses, consider
@@ -268,11 +269,11 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 ## Asides
 
-The book uses plenty of side notes. In <abbr>HTML</abbr> we define those using
-`<aside>` elements. Along with this paragraph there's a side note. With a large
-enough viewport, you'll see it in the right margin, aligned with the top of the
-previous paragraph; with a smaller viewport, it'll be collapsed into an inline
-paragraph with ornamentation.
+Bringhurst's book uses plenty of side notes. In <abbr>HTML</abbr> we define
+those using `<aside>` elements. Along with this paragraph there's a side note.
+With a large enough viewport, you'll see it in the right margin, aligned with
+the top of the previous paragraph; with a smaller viewport, it'll be collapsed
+into an inline paragraph with ornamentation.
 
 <aside>
 This is the contents of the aside element, shown in a smaller font size and with ragged-right text alignment.
@@ -282,7 +283,8 @@ This is the contents of the aside element, shown in a smaller font size and with
 ## Names
 
 Proper nouns and canonical names, distinguished using the `.canonical-name`
-class, are rendered as small-caps much like in the example from the book:
+class, are rendered as small-caps much like in the example from Bringhurst's
+book:
 
 <figure class="example">
 ... on the islands of [Lombok]{.canonical-name}, [Bali]{.canonical-name}, [Flores]{.canonical-name},
