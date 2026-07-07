@@ -395,7 +395,7 @@ don't want it in a dynamic web application.
 
 Copy or fork what you want, modify it to your heart's content, but don't forget
 proper attribution. The sources have license information in their headers, so
-it's easy as keeping those around.
+it's as easy as keeping those around.
 
 ## Getting started
 
@@ -415,7 +415,7 @@ pandoc \
     -s \
     --number-sections --number-offset=0 \
     --css the-bringhurst-web/index.css \
-    -V'header-includes=<script src="index.js"></script>' \
+    -V'header-includes=<script src="the-bringhurst-web/index.js"></script>' \
     --no-highlight \
    -i index.md \
    -o index.html
