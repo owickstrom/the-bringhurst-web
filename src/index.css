@@ -500,6 +500,12 @@ li::marker {
   text-decoration: underline;
 }
 
+@media print {
+  body> h1, img {
+    break-before: page;
+  }
+}
+
 /* DEMO UTILITIES */
 
 #font-sizes td {
