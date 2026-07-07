@@ -149,7 +149,18 @@ grave heresy on the web. *Thou shalt not justify.* That's what we've all been
 taught. But browsers have improved over time and today it's not unthinkable to
 justify text. This stylesheet uses `word-break` and `hyphens` to control how
 words are broken and hyphenated at line breaks. The `hyphenate-limit-chars`
-attribute is useful to control the bounds of hyphenation.
+property is useful to control the bounds of hyphenation.
+
+The risk is of course getting horrible word spacing and *rivers* of whitespace
+in your paragraphs. If justified text doesn't work for your uses, consider
+`text-align: left` instead. In this document I find that it works acceptably
+with the line lengths, font size, and the content itself.
+
+<aside>
+["Justified Text: Better Than
+Expected?"](https://cloudfour.com/thinks/justified-text-better-than-expected/)
+goes into the weeds of text justification and modern browser support.
+</aside>
 
 ### Indented paragraphs for legibility
 
