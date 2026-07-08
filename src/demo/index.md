@@ -34,7 +34,7 @@ many other settings with minor tweaks.
 
 # Foundations
 
-> Typography is the craft of endowing human language with a durable visual form.
+> <p>Typography is the craft of endowing human language with a durable visual form.</p>
 > <footer>
 >   <span class="author">Robert Bringhurst</span>,
 >   <cite>The Elements of Typographic Style</cite>, 2nd edition,
@@ -295,10 +295,10 @@ book:
 ## Blockquotes
 
 Bringhurst talks about various ways of typesetting quotations, and the one I
-landed on is using an indented block, italic quote text, and a footer with
-*author*, *work*, and *year*.
+landed on is using an indented block, quotation marks around the text, and a
+footer with *author*, *work*, and *year*.
 
-> Je n’ai fait celle-ci plus longue que parce que je n’ai pas eu le loisir de la faire plus courte.
+> <p>Je n’ai fait celle-ci plus longue que parce que je n’ai pas eu le loisir de la faire plus courte.</p>
 > <footer>
 >   <span class="author">Blaise Pascal</span>,
 >   <cite>Lettres Provinciales</cite>, letter XVI,
@@ -396,7 +396,7 @@ I'm aiming for. Here's some code from the stylesheet:
 
 # Usage
 
-> Immature poets imitate; mature poets steal.
+> <p>Immature poets imitate; mature poets steal.</p>
 > <footer>
 >   <span class="author">T.S. Eliot</span>,
 >   <cite>The Sacred Wood</cite>,

@@ -198,12 +198,18 @@ abbr {
 blockquote {
   padding: 0;
   margin: var(--line-height) 3ch;
-  font-style: italic;
 }
 blockquote p {
   text-indent: 0;
 }
+blockquote p:first-of-type:before {
+  content: "“";
+}
+blockquote p:last-of-type::after {
+  content: "”";
+}
 blockquote footer {
+  order: 9999;
   margin-top: var(--line-height);
   font-style: normal;
 }
