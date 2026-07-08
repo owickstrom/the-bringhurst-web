@@ -17,10 +17,10 @@ Web](https://owickstrom.github.io/the-monospace-web/){.canonical-name} was born
 out of that love, and it took off way harder than I ever thought it would, with
 many personal blogs and even application interfaces having adopted it.
 
-So, here I am again, spending weekend off-hours in a form of meditative state
+So, here I am again, spending weekend spare hours in a form of meditative state
 writing <abbr>CSS</abbr>. This time, inspiration struck after reading Robert
-Bringhurst's classic *The Elements of Typographic Style*. A challenge indeed,
-trying to implement the layout and typography of the book itself in the
+Bring&shy;hurst's classic *The Elements of Typographic Style*. A challenge
+indeed, trying to implement the layout and typography of the book itself in the
 browser. Reckless, some might say! Surely the same rules don't apply across
 print and web, where the latter cannot lean on a fixed page size, but has all
 the capabilities of a programmable platform. Perhaps, perhaps not. I've decided
@@ -138,9 +138,9 @@ design, for instance on smaller viewports:
 ```
 
 The line height is 1.2rem, and is used as the basis for vertical alignment of
-all elements. Much like in *The Monospace Web* --- but not to the same extremes
---- I've tried to get everything globally aligned to multiples of the line
-height.
+all elements. Much like in [The Monospace Web]{.canonical-name} --- but not to
+the same extremes --- I've tried to get everything globally aligned to
+multiples of the line height.
 
 ### Justified text in modern browsers
 
@@ -155,7 +155,8 @@ hyphenation.
 The risk is of course getting horrible word spacing and *rivers* of whitespace
 in your paragraphs. If justified text doesn't work for your uses, consider
 `text-align: left` instead. In this document I find that it works acceptably
-with the line lengths, font size, and the content itself.
+with the line lengths, font size, and the content itself. I've also inserted
+a few soft hyphens to further guide the word breaks for some tricky words.
 
 <aside>
 ["Justified Text: Better Than
@@ -193,8 +194,8 @@ width of the text.
 
 ## Headings
 
-The design provides styles for three level of headings --- top-level chapter headings (`h1`), section headings (`h2`), and
-sub-section headings (`h3`):
+The design provides styles for three level of headings: top-level chapter headings (`h1`), section headings (`h2`), and
+sub-section headings (`h3`).
 
 <figure class"example">
 
@@ -319,8 +320,8 @@ specifically using small-caps and italic text.
     </figcaption>
 </figure>
 
-The captions are set in a smaller size, 0.875rem, matching the side notes. This
-clarifies the distinction between primary and secondary content.
+The captions are set in a smaller size, matching the side notes. This clarifies
+the distinction between primary and secondary content.
 
 
 ## Lists
@@ -379,7 +380,7 @@ This design is geared towards prose, not code-heavy technical writing, but code
 blocks and inline code should read well nonetheless. The font choice of
 [Courier Prime]{.canonical-name} might feel a bit typewriter-nostalgic, but I
 find it goes very well with [Alegreya]{.canonical-name} and the overall feel
-I'm aiming for. Here's some code from this page's `index.css` file:
+I'm aiming for. Here's some code from the stylesheet:
 
 <figure class="example">
 ```css
@@ -447,4 +448,6 @@ stripping away the default CSS included by Pandoc.
 
 # Colophon {.unnumbered}
 
-TODO: credits and such
+There we have it, *The Proportional Web*. I hope you enjoyed reading if you got
+this far! A big thanks to [U.S. Graphics](https://x.com/usgraphics) for
+reviewing a draft of this document.
