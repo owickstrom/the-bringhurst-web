@@ -13,8 +13,8 @@
 <body>
 <header>
   <h1 class="title">The Bringhurst Web</h1>
-  <p class="subtitle">A web adaptation of <em>The Elements of
-Typographical Style</em></span>
+  <p class="subtitle">Inspired by the <em>The Elements of Typographical
+Style</em></span>
 <p>Authored by <cite><a href="https://wickstrom.tech">Oskar
 Wickström</a></cite>. <span class="version">v0.1.0</span>, licensed under <a><abbr>MIT</abbr></a>.</p>
 </header>
@@ -590,13 +590,16 @@ don’t forget proper attribution. The sources have license information in
 their headers, so it’s as easy as keeping those around.</p>
 <h2 data-number="3.2" id="getting-started"><span
 class="header-section-number">3.2</span> Getting started</h2>
-<p>To get started quickly, add these to the <code>head</code> element of
-your HTML:</p>
+<p>To get started quickly, download <a
+href="https://github.com/owickstrom/the-bringhurst-web">the sources from
+GitHub</a>, put the directory in your project as
+<code>the-bringhurst-web</code>, and add these to the <code>head</code>
+element of your HTML:</p>
 <div class="sourceCode" id="cb3"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://owickstrom.github.io/the-bringhurst-web/index.css&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div>
-<p>If you’re using Pandoc, download the sources, put it in your project
-as <code>the-bringhurst-web</code>, and invoke it with some thing like
-the following set of arguments:</p>
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;the-bringhurst-web/index.css&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;the-bringhurst-web/index.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>If you’re using Pandoc, invoke it with some thing like the following
+set of arguments:</p>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="dt">\</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">--toc</span> <span class="at">--toc-depth</span><span class="op">=</span>2 <span class="dt">\</span></span>
@@ -605,8 +608,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">--css</span> the-bringhurst-web/index.css <span class="dt">\</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">-V</span><span class="st">&#39;header-includes=&lt;script src=&quot;the-bringhurst-web/index.js&quot;&gt;&lt;/script&gt;&#39;</span> <span class="dt">\</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">--no-highlight</span> <span class="dt">\</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>   <span class="at">-i</span> index.md <span class="dt">\</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>   <span class="at">-o</span> index.html</span></code></pre></div>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>   <span class="at">-i</span> input.md <span class="dt">\</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>   <span class="at">-o</span> output.html</span></code></pre></div>
 <p>If you do need syntax highlighting, consider using a custom template
 like the <a
 href="https://github.com/owickstrom/the-bringhurst-web/blob/main/src/demo/template.html">one

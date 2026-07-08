@@ -373,9 +373,10 @@ aside:before {
 
 pre {
   white-space: pre;
-  overflow-x: auto;
   margin: var(--line-height) 0;
-  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 figure pre {
   margin: 0;
@@ -506,10 +507,5 @@ li::marker {
   }
   body> h1, img {
     break-before: page;
-  }
-  pre {
-    overflow: visible;
-    white-space: pre-wrap;
-    word-break: break-all;
   }
 }

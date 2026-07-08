@@ -1,6 +1,6 @@
 ---
 title: The Bringhurst Web
-subtitle: A web adaptation of *The Elements of Typographical Style*
+subtitle: Inspired by the *The Elements of Typographical Style*
 author: '[Oskar Wickström](https://wickstrom.tech)'
 lang: en
 toc-title: Contents
@@ -415,14 +415,17 @@ it's as easy as keeping those around.
 
 ## Getting started
 
-To get started quickly, add these to the `head` element of your HTML:
+To get started quickly, download [the sources from
+GitHub](https://github.com/owickstrom/the-bringhurst-web), put the directory in
+your project as `the-bringhurst-web`, and add these to the `head` element of
+your HTML:
 
 ```html
-<link rel="stylesheet" href="https://owickstrom.github.io/the-bringhurst-web/index.css" />
+<link rel="stylesheet" href="the-bringhurst-web/index.css" />
+<script src="the-bringhurst-web/index.js"></script>
 ```
 
-If you're using Pandoc, download the sources, put it in your project as
-`the-bringhurst-web`, and invoke it with some thing like the following set of
+If you're using Pandoc,  invoke it with some thing like the following set of
 arguments:
 
 ```bash
@@ -433,8 +436,8 @@ pandoc \
     --css the-bringhurst-web/index.css \
     -V'header-includes=<script src="the-bringhurst-web/index.js"></script>' \
     --no-highlight \
-   -i index.md \
-   -o index.html
+   -i input.md \
+   -o output.html
 ```
 
 If you do need syntax highlighting, consider using a custom template like the
