@@ -22,7 +22,7 @@ index.html: src/demo/index.md Makefile
 
 index.css: src/index.css src/reset.css
 	esbuild \
-		--banner "/* By Oskar Wickström\nLicensed under the MIT License (https://github.com/owickstrom/the-bringhurst-web/blob/main/LICENSE.md)\n*/" \
+		--banner "/* By Oskar Wickström\nLicensed under the MIT License (https://github.com/owickstrom/the-proportional-web/blob/main/LICENSE.md)\n*/" \
 		--bundle --minify \
 		$< \
 		> $@

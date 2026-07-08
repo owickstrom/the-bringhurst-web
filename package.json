@@ -1,14 +1,14 @@
 {
-  "name": "the-bringhurst-web",
+  "name": "the-proportional-web",
   "version": "0.1.0",
   "description": "TODO",
-  "homepage": "https://github.com/owickstrom/the-bringhurst-web#readme",
+  "homepage": "https://github.com/owickstrom/the-proportional-web#readme",
   "bugs": {
-    "url": "https://github.com/owickstrom/the-bringhurst-web/issues"
+    "url": "https://github.com/owickstrom/the-proportional-web/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/owickstrom/the-bringhurst-web.git"
+    "url": "git+https://github.com/owickstrom/the-proportional-web.git"
   },
   "license": "MIT",
   "author": "Oskar Wickström",

@@ -1,6 +1,6 @@
 ---
-title: The Bringhurst Web
-subtitle: Inspired by the *The Elements of Typographical Style*
+title: The Proportional Web
+subtitle: Inspired by the *The Elements of Typographic Style*
 author: '[Oskar Wickström](https://wickstrom.tech)'
 lang: en
 toc-title: Contents
@@ -147,9 +147,9 @@ multiples of the line height.
 As in Bringhurst's book, body text is justified, not ragged right. To some,
 this is grave heresy on the web. *Thou shalt not justify.* That's what we've
 all been taught. But browsers have improved over time and today it's not
-unthinkable to justify text. This stylesheet uses `word-break` and `hyphens` to
-control how words are broken and hyphenated at line breaks. The
-`hyphenate-limit-chars` property is useful to control the bounds of
+unthinkable to justify text. This stylesheet uses `word-break`, `text-wrap`,
+and `hyphens` to control how words are broken and hyphenated at line breaks.
+The `hyphenate-limit-chars` property is useful to control the bounds of
 hyphenation.
 
 The risk is of course getting horrible word spacing and *rivers* of whitespace
@@ -417,13 +417,13 @@ it's as easy as keeping those around.
 ## Getting started
 
 To get started quickly, download [the sources from
-GitHub](https://github.com/owickstrom/the-bringhurst-web), put the directory in
-your project as `the-bringhurst-web`, and add these to the `head` element of
+GitHub](https://github.com/owickstrom/the-proportional-web), put the directory in
+your project as `the-proportional-web`, and add these to the `head` element of
 your HTML:
 
 ```html
-<link rel="stylesheet" href="the-bringhurst-web/index.css" />
-<script src="the-bringhurst-web/index.js"></script>
+<link rel="stylesheet" href="the-proportional-web/index.css" />
+<script src="the-proportional-web/index.js"></script>
 ```
 
 If you're using Pandoc,  invoke it with some thing like the following set of
@@ -434,8 +434,8 @@ pandoc \
     --toc --toc-depth=2 \
     -s \
     --number-sections --number-offset=0 \
-    --css the-bringhurst-web/index.css \
-    -V'header-includes=<script src="the-bringhurst-web/index.js"></script>' \
+    --css the-proportional-web/index.css \
+    -V'header-includes=<script src="the-proportional-web/index.js"></script>' \
     --no-highlight \
    -i input.md \
    -o output.html
@@ -443,7 +443,7 @@ pandoc \
 
 If you do need syntax highlighting, consider using a custom template like the
 [one used for this HTML
-output](https://github.com/owickstrom/the-bringhurst-web/blob/main/src/demo/template.html),
+output](https://github.com/owickstrom/the-proportional-web/blob/main/src/demo/template.html),
 stripping away the default CSS included by Pandoc.
 
 # Colophon {.unnumbered}

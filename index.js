@@ -1,5 +1,5 @@
 // By Oskar Wickström
-// Licensed under the MIT License (https://github.com/owickstrom/the-bringhurst-web/blob/main/LICENSE.md)
+// Licensed under the MIT License (https://github.com/owickstrom/the-proportional-web/blob/main/LICENSE.md)
 
 window.addEventListener("load", () => {
   const asides = [...document.querySelectorAll("aside")];

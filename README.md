@@ -1,12 +1,12 @@
-# The Bringhurst Web
+# The Proportional Web
 
-A web adaptation of *The Elements of Typographical Style*
+Inspired by *The Elements of Typographic Style*
 
 <hr>
 
 The purpose, usage, and implementation of this project is documented at:
 
-https://owickstrom.github.io/the-bringhurst-web/
+https://owickstrom.github.io/the-proportional-web/
 
 ## Build
 

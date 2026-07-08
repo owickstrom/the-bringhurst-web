@@ -5,15 +5,15 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Oskar Wickström" />
-  <title>The Bringhurst Web</title>
+  <title>The Proportional Web</title>
   <link rel="stylesheet" href="src/index.css" />
   <link rel="stylesheet" href="src/demo/demo.css" />
   <script src="index.js"></script>
 </head>
 <body>
 <header>
-  <h1 class="title">The Bringhurst Web</h1>
-  <p class="subtitle">Inspired by the <em>The Elements of Typographical
+  <h1 class="title">The Proportional Web</h1>
+  <p class="subtitle">Inspired by the <em>The Elements of Typographic
 Style</em></span>
 <p>Authored by <cite><a href="https://wickstrom.tech">Oskar
 Wickström</a></cite>. <span class="version">v0.1.0</span>, licensed under <a><abbr>MIT</abbr></a>.</p>
@@ -303,10 +303,10 @@ browsers</h3>
 some, this is grave heresy on the web. <em>Thou shalt not justify.</em>
 That’s what we’ve all been taught. But browsers have improved over time
 and today it’s not unthinkable to justify text. This stylesheet uses
-<code>word-break</code> and <code>hyphens</code> to control how words
-are broken and hyphenated at line breaks. The
-<code>hyphenate-limit-chars</code> property is useful to control the
-bounds of hyphenation.</p>
+<code>word-break</code>, <code>text-wrap</code>, and
+<code>hyphens</code> to control how words are broken and hyphenated at
+line breaks. The <code>hyphenate-limit-chars</code> property is useful
+to control the bounds of hyphenation.</p>
 <p>The risk is of course getting horrible word spacing and
 <em>rivers</em> of whitespace in your paragraphs. If justified text
 doesn’t work for your uses, consider <code>text-align: left</code>
@@ -590,13 +590,13 @@ their headers, so it’s as easy as keeping those around.</p>
 <h2 data-number="3.2" id="getting-started"><span
 class="header-section-number">3.2</span> Getting started</h2>
 <p>To get started quickly, download <a
-href="https://github.com/owickstrom/the-bringhurst-web">the sources from
-GitHub</a>, put the directory in your project as
-<code>the-bringhurst-web</code>, and add these to the <code>head</code>
-element of your HTML:</p>
+href="https://github.com/owickstrom/the-proportional-web">the sources
+from GitHub</a>, put the directory in your project as
+<code>the-proportional-web</code>, and add these to the
+<code>head</code> element of your HTML:</p>
 <div class="sourceCode" id="cb3"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;the-bringhurst-web/index.css&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;the-bringhurst-web/index.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div>
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;the-proportional-web/index.css&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;the-proportional-web/index.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>If you’re using Pandoc, invoke it with some thing like the following
 set of arguments:</p>
 <div class="sourceCode" id="cb4"><pre
@@ -604,14 +604,14 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">--toc</span> <span class="at">--toc-depth</span><span class="op">=</span>2 <span class="dt">\</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">-s</span> <span class="dt">\</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">--number-sections</span> <span class="at">--number-offset</span><span class="op">=</span>0 <span class="dt">\</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">--css</span> the-bringhurst-web/index.css <span class="dt">\</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">-V</span><span class="st">&#39;header-includes=&lt;script src=&quot;the-bringhurst-web/index.js&quot;&gt;&lt;/script&gt;&#39;</span> <span class="dt">\</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">--css</span> the-proportional-web/index.css <span class="dt">\</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">-V</span><span class="st">&#39;header-includes=&lt;script src=&quot;the-proportional-web/index.js&quot;&gt;&lt;/script&gt;&#39;</span> <span class="dt">\</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">--no-highlight</span> <span class="dt">\</span></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>   <span class="at">-i</span> input.md <span class="dt">\</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>   <span class="at">-o</span> output.html</span></code></pre></div>
 <p>If you do need syntax highlighting, consider using a custom template
 like the <a
-href="https://github.com/owickstrom/the-bringhurst-web/blob/main/src/demo/template.html">one
+href="https://github.com/owickstrom/the-proportional-web/blob/main/src/demo/template.html">one
 used for this HTML output</a>, stripping away the default CSS included
 by Pandoc.</p>
 <h1 class="unnumbered" id="colophon">Colophon</h1>
