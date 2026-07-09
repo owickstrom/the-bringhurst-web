@@ -309,7 +309,8 @@ footer with *author*, *work*, and *year*.
 
 Images with captions are put in `<figure>` and `<figcaption>` elements,
 respectively. Similar to blockquotes, *author* and *work* are styled 
-specifically using small-caps and italic text.
+specifically using small-caps and italic text, and they share the
+indentation.
 
 <figure>
     <img src="src/demo/vitruvian-man.jpg" width="435" />
@@ -319,9 +320,6 @@ specifically using small-caps and italic text.
         <span>c. 1490, pen and watercolor over metalpoint on paper, 34.4 × 24.5 cm (photograph via [Wikimedia Commons](https://en.wikipedia.org/wiki/File:VitruvianMan_Leonardo_a.jpg))</span>
     </figcaption>
 </figure>
-
-The captions are set in a smaller size, matching the side notes. This clarifies
-the distinction between primary and secondary content.
 
 
 ## Lists
