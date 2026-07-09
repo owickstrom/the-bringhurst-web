@@ -360,6 +360,7 @@ aside:before {
   content: "❧";
   font-size: 1rem;
   height: .875rem;
+  margin-right: .5ch;
   line-height: var(--line-height);
 }
 

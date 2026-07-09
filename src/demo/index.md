@@ -277,7 +277,7 @@ the top of the previous paragraph; with a smaller viewport, it'll be collapsed
 into an inline paragraph with ornamentation.
 
 <aside>
-This is the contents of the aside element, shown in a smaller font size and with ragged-right text alignment.
+This is the content of the aside element, shown in a smaller font size and with ragged-right text alignment.
 </aside>
 
 
@@ -446,9 +446,9 @@ stripping away the default CSS included by Pandoc.
 
 # Colophon {.unnumbered}
 
-There we have it, *The Proportional Web*. I hope you enjoyed reading if you got
-this far! A big thanks to [U.S. Graphics](https://x.com/usgraphics) and [Mikael
-Brockman](https://x.com/meekaale) for reviewing drafts of this document.
+There we have it, *The Proportional Web*. The methodology of Bringhurst's book
+is rich and I highly recommend you read it. I've only scratched the surface in
+this exposition, and applied and adapted a small subset of his ideas.
 
 This document was produced using
 [Pandoc](https://hackage.haskell.org/package/pandoc-cli),
@@ -457,5 +457,8 @@ This document was produced using
 Make](https://www.gnu.org/software/make/). The design borrows heavily, both in
 ideas and actual layout, from *The Elements of Typographic Style* by Robert
 Bringhurst.
+
+A big thanks to [U.S. Graphics](https://x.com/usgraphics) and [Mikael
+Brockman](https://x.com/meekaale) for reviewing drafts of this document.
 
 <footer>Copyright 2026 Oskar Wickström</footer>
