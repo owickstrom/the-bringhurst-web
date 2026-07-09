@@ -1,6 +1,6 @@
 # The Proportional Web
 
-Inspired by *The Elements of Typographic Style*
+Inspired by the book *The Elements of Typographic Style* by Robert Bringhurst.
 
 <hr>
 
